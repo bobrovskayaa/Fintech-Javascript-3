@@ -90,15 +90,16 @@ function printNumbers(max, cols) {
   for (let i = 0; i < NumStr; i++) {
     for (let j = 0; j < cols; j++) {
       let CurInd = i + j * NumStr;
-      if (CurInd <= max) {
-        if (CurInd < 10) {
-          FinalString += ' ';
-        }
-        FinalString += CurInd;
-        if (CurInd === max) flag = true;       
-        if (j < cols - 1 && !flag) {
-          FinalString += ' ';
-        }
+      
+      if (CurInd < 10 && !flag) {
+        FinalString += ' ';
+      }
+      FinalString += CurInd;
+      if (CurInd === max) {
+        flag = true;
+      }
+      if (j < cols - 1 && !flag) {
+        FinalString += ' ';
       }
     }
     if (i < NumStr - 1 && !flag) {
