@@ -5,12 +5,12 @@ describe('Lesson 1', () => {
   describe('task 1 getMinMax', () => {
     it('should normally get numeric values from string', () => {
       expect(getMinMax('1 и 6.45, -2, но 8, а затем 15, то есть 2.7 и -1028')).to.eql({
-        max: 45,
+        max: 15,
         min: -1028
       });
 
       expect(getMinMax('100 и 500 -3; 178 или неточное число 1.3232')).to.eql({
-        max: 3232,
+        max: 500,
         min: -3
       });
     });

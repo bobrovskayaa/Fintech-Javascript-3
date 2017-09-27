@@ -5,7 +5,7 @@
  * '1 и 6.45, -2, но 8, а затем 15, то есть 2.7 и -1028' => { min: -1028, max: 15 }
  */
 function getMinMax(str) {
-    let arr = str.split(/[ .,!?:;]/)
+    let arr = str.split(/[ ,!?:;]/)
     for (let i = 0; i < arr.length; i++) {
         if (isNaN(+arr[i]) || (arr[i].length === 0)) {
             arr.splice(i, 1)
