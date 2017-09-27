@@ -95,7 +95,7 @@ function printNumbers(max, cols) {
           FinalString += ' ';
         }
         FinalString += CurInd;
-        if (CurInd === max) flag = true;        }
+        if (CurInd === max) flag = true;       
         if (j < cols - 1 && !flag) {
           FinalString += ' ';
         }
