@@ -17,10 +17,10 @@ function getMinMax(str) {
   let max = arr[0];
 
   for (let i = 1; i < arr.length; i++) {
-    min = Math.min(min,arr[i]);
-    max = Math.max(max,arr[i]);
+    min = Math.min(min, arr[i]);
+    max = Math.max(max, arr[i]);
   }
-  return {min: min, max:max};
+  return { min:min, max:max };
 }
 
 /* ============================================= */
@@ -31,10 +31,9 @@ function getMinMax(str) {
  * @return {number} число под номером х
  */
 function fibonacciSimple(n) {
-  if (n===0)
-    return 0;
-  if (n===1)
-    return 1;
+  if (n === 0 || n === 1) {
+    return n;
+  }
   return fibonacciSimple(n-1)+fibonacciSimple(n-2);
 }
 /* ============================================= */
@@ -50,13 +49,16 @@ function fibonacciWithCache(n) {
 
   function fibonacci(n) {
     let value;
-      if (n in cache)
+      if (n in cache) {
         value = cache[n];
+      }
       else {
-        if (n === 0 || n === 1)
+        if (n === 0 || n === 1) {
           value = n;
-        else
-          value = fibonacci(n - 1) + fibonacci(n - 2)
+	}
+        else {
+          value = fibonacci(n - 1) + fibonacci(n - 2);
+	}
         cache[n] = value;
       }
     return value;
@@ -83,30 +85,34 @@ function fibonacciWithCache(n) {
  * @return {string}
  */
 function printNumbers(max, cols) {
-  let num_str = Math.ceil((max+1)/cols);
-  let final_string = '';
+  let NumStr = Math.ceil((max+1)/cols);
+  let FinalString = '';
   let flag = false;
 
-  for (let i = 0; i < num_str; i++){
+  for (let i = 0; i < NumStr; i++){
     for (let j = 0; j < cols; j++){
-      if (i + j*num_str <= max)
-        if (i + j*num_str < 10)
-          final_string += ' ' + (i + j*num_str);
-        else
-          final_string += i + j*num_str;
-      if (i + j*num_str === max) {
+      if (i + j*NumStr <= max) {
+        if (i + j*NumStr < 10) {
+          FinalString += ' ' + (i + j*NumStr);
+	}
+        else {
+          FinalString += i + j*NumStr;
+	}
+      }
+      if (i + j*NumStr === max) {
         flag = true;
         break;
       }
-      if (j < cols-1 && !flag)
-        final_string += ' ';
+      if (j < cols-1 && !flag) {
+        FinalString += ' ';
+      }
     }
     if (flag)
       break;
-    if (i < num_str - 1 && !flag)
-      final_string += '\n';
+    if (i < NumStr - 1 && !flag)
+      FinalString += '\n';
   }
-  return final_string;
+  return FinalString;
 }
 
 /* ============================================= */
@@ -120,21 +126,21 @@ function rle(input) {
   let final_str = ''
 
   if (input.length > 0) {
-    let cur_sym = input[0];
+    let CurSym = input[0];
     let count = 1;
 
     for (let i = 1; i < input.length; i++) {
-      if (input[i] === cur_sym)
+      if (input[i] === CurSym)
         ++count;
       else {
-        final_str += cur_sym;
+        final_str += CurSym;
         if (count > 1)
           final_str += count;
         count = 1;
-        cur_sym = input[i];
+        CurSym = input[i];
       }
     }
-    final_str += cur_sym;
+    final_str += CurSym;
     if (count > 1)
       final_str += count;
   }
