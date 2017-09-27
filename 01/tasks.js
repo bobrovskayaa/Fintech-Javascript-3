@@ -94,14 +94,15 @@ function printNumbers(max, cols) {
 
   for (let i = 0; i < NumStr; i++) {
     for (let j = 0; j < cols; j++) {
-      if (i + j * NumStr <= max) {
-        if (i + j * NumStr < 10) {
+      let CurInd = i + j * NumStr;
+      if (CurInd <= max) {
+        if (CurInd < 10) {
           FinalString += ' ';
         }
-        FinalString += i + j * NumStr;
-        if (i + j * NumStr === max) {
-          flag = true;
-        }
+        FinalString += CurInd;
+      }
+      if (CurInd === max) {
+        flag = true;
       }
       if (j < cols - 1 && !flag) {
         FinalString += ' ';
@@ -114,6 +115,7 @@ function printNumbers(max, cols) {
   return FinalString;
 }
 
+
 /* ============================================= */
 
 /**
@@ -123,28 +125,25 @@ function printNumbers(max, cols) {
  */
 function rle(input) {
   let FinalString = '';
+  let CurSym = input[0];
+  let count = 1;
 
-  if (input.length > 0) {
-    let CurSym = input[0];
-    let count = 1;
-
-    for (let i = 1; i < input.length; i++) {
-      if (input[i] === CurSym) {
-        ++count;
-      }
-      else {
-        FinalString += CurSym;
-        if (count > 1) {
-          FinalString += count;
-        }
-        count = 1;
-        CurSym = input[i];
-      }
+  for (let i = 1; i < input.length; i++) {
+    if (input[i] === CurSym) {
+      ++count;
     }
-    FinalString += CurSym;
-    if (count > 1) {
-      FinalString += count;
+    else {
+      FinalString += CurSym;
+      if (count > 1) {
+        FinalString += count;
+      }
+      count = 1;
+      CurSym = input[i];
     }
+  }
+  FinalString += CurSym;
+  if (count > 1) {
+    FinalString += count;
   }
   return FinalString;
 }
