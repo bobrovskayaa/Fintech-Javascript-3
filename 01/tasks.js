@@ -20,7 +20,9 @@ function getMinMax(str) {
     min = Math.min(min, arr[i]);
     max = Math.max(max, arr[i]);
   }
-  return { min: min, max: max };
+  const obj = { min: min, max: max }; 
+
+  return obj;
 }
 
 /* ============================================= */
@@ -48,7 +50,7 @@ function fibonacciWithCache(n) {
   let cache = {};
 
   function fibonacci(n) {
-    let value; 
+    let value;
 
     if (n in cache) {
       value = cache[n];
@@ -90,15 +92,15 @@ function printNumbers(max, cols) {
   let FinalString = '';
   let flag = false;
 
-  for (let i = 0; i < NumStr; i++){
-    for (let j = 0; j < cols; j++){
+  for (let i = 0; i < NumStr; i++) {
+    for (let j = 0; j < cols; j++) {
       if (i + j * NumStr <= max) {
         if (i + j * NumStr < 10) {
           FinalString += ' ' + (i + j * NumStr);
-	}
+        }
         else {
           FinalString += i + j * NumStr;
-	}
+        }
       }
       if (i + j * NumStr === max) {
         flag = true;
@@ -108,10 +110,12 @@ function printNumbers(max, cols) {
         FinalString += ' ';
       }
     }
-    if (flag)
+    if (flag) {
       break;
-    if (i < NumStr - 1 && !flag)
+    }
+    if (i < NumStr - 1 && !flag) {
       FinalString += '\n';
+    }
   }
   return FinalString;
 }
@@ -137,7 +141,7 @@ function rle(input) {
         FinalString += CurSym;
         if (count > 1) {
           FinalString += count;
-	}
+        }
         count = 1;
         CurSym = input[i];
       }
