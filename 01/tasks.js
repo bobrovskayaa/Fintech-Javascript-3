@@ -1,3 +1,4 @@
+/* eslint-disable max-statements */
 /**
  * найдите минимум и максимум в любой строке
  * @param  {string} string входная строка(числа отделены от других частей строки пробелами или знаками препинания)
@@ -5,7 +6,7 @@
  * '1 и 6.45, -2, но 8, а затем 15, то есть 2.7 и -1028' => { min: -1028, max: 15 }
  */
 function getMinMax(str) {
-  let arr = str.split(/[ ,!?:;]/);
+  const arr = str.split(/[ ,!?:;]/);
 
   for (let i = 0; i < arr.length; i++) {
     if (isNaN(+arr[i]) || (arr[i].length === 0)) {
@@ -20,7 +21,7 @@ function getMinMax(str) {
     min = Math.min(min, arr[i]);
     max = Math.max(max, arr[i]);
   }
-  const obj = { 'min': min, 'max': max };
+  const obj = {min, max};
 
   return obj;
 }
@@ -38,6 +39,7 @@ function fibonacciSimple(n) {
   }
   return fibonacciSimple(n - 1) + fibonacciSimple(n - 2);
 }
+
 /* ============================================= */
 
 /**
@@ -47,15 +49,14 @@ function fibonacciSimple(n) {
  * @return {number} число под номером х
  */
 function fibonacciWithCache(n) {
-  let cache = {};
+  const cache = {};
 
   function fibonacci(n) {
     let value;
 
     if (n in cache) {
       value = cache[n];
-    }
-    else {
+    } else {
       value = (n === 0 || n === 1) ? n : fibonacci(n - 1) + fibonacci(n - 2);
       cache[n] = value;
     }
@@ -83,13 +84,14 @@ function fibonacciWithCache(n) {
  * @return {string}
  */
 function printNumbers(max, cols) {
-  let NumStr = Math.ceil((max + 1) / cols);
+  const NumStr = Math.ceil((max + 1) / cols);
   let FinalString = '';
   let flag = false;
 
   for (let i = 0; i < NumStr; i++) {
     for (let j = 0; j < cols && !flag; j++) {
-      let CurInd = i + j * NumStr;
+      const CurInd = i + j * NumStr;
+
       if (CurInd < 10) {
         FinalString += ' ';
       }
@@ -124,8 +126,7 @@ function rle(input) {
   for (let i = 1; i < input.length; i++) {
     if (input[i] === CurSym) {
       ++count;
-    }
-    else {
+    } else {
       FinalString += CurSym;
       if (count > 1) {
         FinalString += count;
