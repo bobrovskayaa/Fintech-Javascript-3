@@ -20,7 +20,7 @@ function getMinMax(str) {
     min = Math.min(min, arr[i]);
     max = Math.max(max, arr[i]);
   }
-  return { min:min, max:max };
+  return { min: min, max: max };
 }
 
 /* ============================================= */
@@ -34,7 +34,7 @@ function fibonacciSimple(n) {
   if (n === 0 || n === 1) {
     return n;
   }
-  return fibonacciSimple(n-1)+fibonacciSimple(n-2);
+  return fibonacciSimple(n - 1) + fibonacciSimple(n - 2);
 }
 /* ============================================= */
 
@@ -48,19 +48,20 @@ function fibonacciWithCache(n) {
   let cache = {};
 
   function fibonacci(n) {
-    let value;
-      if (n in cache) {
-        value = cache[n];
+    let value; 
+
+    if (n in cache) {
+      value = cache[n];
+    }
+    else {
+      if (n === 0 || n === 1) {
+        value = n;
       }
       else {
-        if (n === 0 || n === 1) {
-          value = n;
-	}
-        else {
-          value = fibonacci(n - 1) + fibonacci(n - 2);
-	}
-        cache[n] = value;
+        value = fibonacci(n - 1) + fibonacci(n - 2);
       }
+      cache[n] = value;
+    }
     return value;
   }
 
@@ -85,25 +86,25 @@ function fibonacciWithCache(n) {
  * @return {string}
  */
 function printNumbers(max, cols) {
-  let NumStr = Math.ceil((max+1)/cols);
+  let NumStr = Math.ceil((max + 1) / cols);
   let FinalString = '';
   let flag = false;
 
   for (let i = 0; i < NumStr; i++){
     for (let j = 0; j < cols; j++){
-      if (i + j*NumStr <= max) {
-        if (i + j*NumStr < 10) {
-          FinalString += ' ' + (i + j*NumStr);
+      if (i + j * NumStr <= max) {
+        if (i + j * NumStr < 10) {
+          FinalString += ' ' + (i + j * NumStr);
 	}
         else {
-          FinalString += i + j*NumStr;
+          FinalString += i + j * NumStr;
 	}
       }
-      if (i + j*NumStr === max) {
+      if (i + j * NumStr === max) {
         flag = true;
         break;
       }
-      if (j < cols-1 && !flag) {
+      if (j < cols - 1 && !flag) {
         FinalString += ' ';
       }
     }
@@ -123,7 +124,7 @@ function printNumbers(max, cols) {
  * @return {string}
  */
 function rle(input) {
-  let final_str = ''
+  let FinalString = ''
 
   if (input.length > 0) {
     let CurSym = input[0];
@@ -133,18 +134,20 @@ function rle(input) {
       if (input[i] === CurSym)
         ++count;
       else {
-        final_str += CurSym;
-        if (count > 1)
-          final_str += count;
+        FinalString += CurSym;
+        if (count > 1) {
+          FinalString += count;
+	}
         count = 1;
         CurSym = input[i];
       }
     }
-    final_str += CurSym;
-    if (count > 1)
-      final_str += count;
+    FinalString += CurSym;
+    if (count > 1) {
+      FinalString += count;
+    }
   }
-  return final_str;
+  return FinalString;
 }
 
 
