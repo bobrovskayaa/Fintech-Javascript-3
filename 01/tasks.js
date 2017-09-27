@@ -56,12 +56,7 @@ function fibonacciWithCache(n) {
       value = cache[n];
     }
     else {
-      if (n === 0 || n === 1) {
-        value = n;
-      }
-      else {
-        value = fibonacci(n - 1) + fibonacci(n - 2);
-      }
+      value = (n === 0 || n === 1) ? n : fibonacci(n - 1) + fibonacci(n - 2);
       cache[n] = value;
     }
     return value;
@@ -100,12 +95,10 @@ function printNumbers(max, cols) {
           FinalString += ' ';
         }
         FinalString += CurInd;
-      }
-      if (CurInd === max) {
-        flag = true;
-      }
-      if (j < cols - 1 && !flag) {
-        FinalString += ' ';
+        if (CurInd === max) flag = true;        }
+        if (j < cols - 1 && !flag) {
+          FinalString += ' ';
+        }
       }
     }
     if (i < NumStr - 1 && !flag) {
