@@ -20,7 +20,7 @@ function getMinMax(str) {
     min = Math.min(min, arr[i]);
     max = Math.max(max, arr[i]);
   }
-  const obj = { min: min, max: max }; 
+  const obj = { 'min': min, 'max': max };
 
   return obj;
 }
@@ -96,22 +96,16 @@ function printNumbers(max, cols) {
     for (let j = 0; j < cols; j++) {
       if (i + j * NumStr <= max) {
         if (i + j * NumStr < 10) {
-          FinalString += ' ' + (i + j * NumStr);
+          FinalString += ' ';
         }
-        else {
-          FinalString += i + j * NumStr;
+        FinalString += i + j * NumStr;
+        if (i + j * NumStr === max) {
+          flag = true;
         }
-      }
-      if (i + j * NumStr === max) {
-        flag = true;
-        break;
       }
       if (j < cols - 1 && !flag) {
         FinalString += ' ';
       }
-    }
-    if (flag) {
-      break;
     }
     if (i < NumStr - 1 && !flag) {
       FinalString += '\n';
@@ -128,15 +122,16 @@ function printNumbers(max, cols) {
  * @return {string}
  */
 function rle(input) {
-  let FinalString = ''
+  let FinalString = '';
 
   if (input.length > 0) {
     let CurSym = input[0];
     let count = 1;
 
     for (let i = 1; i < input.length; i++) {
-      if (input[i] === CurSym)
+      if (input[i] === CurSym) {
         ++count;
+      }
       else {
         FinalString += CurSym;
         if (count > 1) {
