@@ -21,7 +21,7 @@ function getMinMax(str) {
     min = Math.min(min, arr[i]);
     max = Math.max(max, arr[i]);
   }
-  const obj = {min, max};
+  const obj = { min, max };
 
   return obj;
 }
