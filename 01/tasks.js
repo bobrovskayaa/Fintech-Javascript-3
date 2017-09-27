@@ -88,10 +88,9 @@ function printNumbers(max, cols) {
   let flag = false;
 
   for (let i = 0; i < NumStr; i++) {
-    for (let j = 0; j < cols; j++) {
+    for (let j = 0; j < cols && !flag; j++) {
       let CurInd = i + j * NumStr;
-      
-      if (CurInd < 10 && !flag) {
+      if (CurInd < 10) {
         FinalString += ' ';
       }
       FinalString += CurInd;
@@ -102,7 +101,7 @@ function printNumbers(max, cols) {
         FinalString += ' ';
       }
     }
-    if (i < NumStr - 1 && !flag) {
+    if (i < NumStr - 1) {
       FinalString += '\n';
     }
   }
