@@ -58,7 +58,7 @@ var fibonacciWithCache = (function() {
     }
     return value;
   };
-})();
+}());
 
 /* ============================================= */
 
