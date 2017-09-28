@@ -97,7 +97,7 @@ function printNumbers(max, cols) {
         }
       }
     }
-    if (i < NumStr - 1 && CurInd < max) {
+    if (i < NumStr - 1 && i + j * NumStr < max) {
       FinalString += '\n';
     }
   }
