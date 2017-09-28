@@ -85,8 +85,8 @@ function printNumbers(max, cols) {
 
   for (let i = 0; i < NumStr; i++) {
     for (let j = 0; j < cols; j++) {
-      const CurInd = i + j * NumStr; 
-      
+      const CurInd = i + j * NumStr;
+
       if (CurInd <= max) {
         if (CurInd < 10) {
           FinalString += ' ';
