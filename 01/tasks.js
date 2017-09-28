@@ -92,18 +92,17 @@ function printNumbers(max, cols) {
           FinalString += ' ';
         }
         FinalString += CurInd;
-        if (j < cols - 1) {
+        if (j < cols - 1 && CurInd < max) {
           FinalString += ' ';
         }
       }
     }
-    if (i < NumStr - 1 && i + (cols - 1) * NumStr < max) {
+    if (i < NumStr - 1) {
       FinalString += '\n';
     }
   }
   return FinalString;
 }
-
 
 /* ============================================= */
 
