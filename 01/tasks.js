@@ -7,6 +7,7 @@
  */
 function getMinMax(str) {
   const arr = str.split(/[ ,!?:;]/);
+  let min, max;
 
   for (let i = 0; i < arr.length; i++) {
     if (isNaN(+arr[i]) || (arr[i].length === 0)) {
@@ -14,16 +15,11 @@ function getMinMax(str) {
       --i;
     }
   }
-  let min = arr[0];
-  let max = arr[0];
 
-  for (let i = 1; i < arr.length; i++) {
-    min = Math.min(min, arr[i]);
-    max = Math.max(max, arr[i]);
-  }
-  const obj = { min, max };
+  min = Math.min(...arr);
+  max = Math.max(...arr);
 
-  return obj;
+  return { min, max };
 }
 
 /* ============================================= */
@@ -86,21 +82,19 @@ function fibonacciWithCache(n) {
 function printNumbers(max, cols) {
   const NumStr = Math.ceil((max + 1) / cols);
   let FinalString = '';
-  let flag = false;
 
   for (let i = 0; i < NumStr; i++) {
-    for (let j = 0; j < cols && !flag; j++) {
-      const CurInd = i + j * NumStr;
-
-      if (CurInd < 10) {
-        FinalString += ' ';
-      }
-      FinalString += CurInd;
-      if (CurInd === max) {
-        flag = true;
-      }
-      if (j < cols - 1 && !flag) {
-        FinalString += ' ';
+    for (let j = 0; j < cols; j++) {
+      const CurInd = i + j * NumStr; 
+      
+      if (CurInd <= max) {
+        if (CurInd < 10) {
+          FinalString += ' ';
+        }
+        FinalString += CurInd;
+        if (j < cols - 1) {
+          FinalString += ' ';
+        }
       }
     }
     if (i < NumStr - 1) {
