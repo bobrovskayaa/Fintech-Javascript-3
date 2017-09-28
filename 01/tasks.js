@@ -44,7 +44,7 @@ function fibonacciSimple(n) {
  * @param {number} x номер числа
  * @return {number} число под номером х
  */
-var fibonacciWithCache = function() {
+var fibonacciWithCache = (function() {
   const cache = {};
 
   return function fibonacci(n) {
@@ -57,9 +57,8 @@ var fibonacciWithCache = function() {
       cache[n] = value;
     }
     return value;
-  }
-
-} ();
+  };
+})();
 
 /* ============================================= */
 
