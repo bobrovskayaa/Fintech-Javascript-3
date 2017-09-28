@@ -44,10 +44,10 @@ function fibonacciSimple(n) {
  * @param {number} x номер числа
  * @return {number} число под номером х
  */
-function fibonacciWithCache(n) {
+var fibonacciWithCache = function() {
   const cache = {};
 
-  function fibonacci(n) {
+  return function fibonacci(n) {
     let value;
 
     if (n in cache) {
@@ -59,8 +59,7 @@ function fibonacciWithCache(n) {
     return value;
   }
 
-  return fibonacci(n);
-}
+} ();
 
 /* ============================================= */
 
