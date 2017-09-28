@@ -1,11 +1,25 @@
+/* eslint-disable max-statements */
 /**
  * найдите минимум и максимум в любой строке
  * @param  {string} string входная строка(числа отделены от других частей строки пробелами или знаками препинания)
  * @return {{min: number, max: number}} объект с минимумом и максимумом
  * '1 и 6.45, -2, но 8, а затем 15, то есть 2.7 и -1028' => { min: -1028, max: 15 }
  */
-function getMinMax(string) {
+function getMinMax(str) {
+  const arr = str.split(/[ ,!?:;]/);
+  let min, max;
 
+  for (let i = 0; i < arr.length; i++) {
+    if (isNaN(+arr[i]) || (arr[i].length === 0)) {
+      arr.splice(i, 1);
+      --i;
+    }
+  }
+
+  min = Math.min(...arr);
+  max = Math.max(...arr);
+
+  return { min, max };
 }
 
 /* ============================================= */
@@ -15,8 +29,11 @@ function getMinMax(string) {
  * @param {number} x номер числа
  * @return {number} число под номером х
  */
-function fibonacciSimple(x) {
-  return x;
+function fibonacciSimple(n) {
+  if (n === 0 || n === 1) {
+    return n;
+  }
+  return fibonacciSimple(n - 1) + fibonacciSimple(n - 2);
 }
 
 /* ============================================= */
@@ -27,9 +44,21 @@ function fibonacciSimple(x) {
  * @param {number} x номер числа
  * @return {number} число под номером х
  */
-function fibonacciWithCache(x) {
-  return x;
-}
+var fibonacciWithCache = (function() {
+  const cache = {};
+
+  return function fibonacci(n) {
+    let value;
+
+    if (n in cache) {
+      value = cache[n];
+    } else {
+      value = (n === 0 || n === 1) ? n : fibonacci(n - 1) + fibonacci(n - 2);
+      cache[n] = value;
+    }
+    return value;
+  };
+}());
 
 /* ============================================= */
 
@@ -49,7 +78,28 @@ function fibonacciWithCache(x) {
  * @return {string}
  */
 function printNumbers(max, cols) {
+  const NumStr = Math.ceil((max + 1) / cols);
+  let FinalString = '';
 
+  for (let i = 0; i < NumStr; i++) {
+    for (let j = 0; j < cols; j++) {
+      const CurInd = i + j * NumStr;
+
+      if (CurInd <= max) {
+        if (CurInd < 10) {
+          FinalString += ' ';
+        }
+        FinalString += CurInd;
+        if (j < cols - 1 && CurInd < max) {
+          FinalString += ' ';
+        }
+      }
+    }
+    if (i < NumStr - 1) {
+      FinalString += '\n';
+    }
+  }
+  return FinalString;
 }
 
 /* ============================================= */
@@ -60,8 +110,29 @@ function printNumbers(max, cols) {
  * @return {string}
  */
 function rle(input) {
+  let FinalString = '';
+  let CurSym = input[0];
+  let count = 1;
 
+  for (let i = 1; i < input.length; i++) {
+    if (input[i] === CurSym) {
+      ++count;
+    } else {
+      FinalString += CurSym;
+      if (count > 1) {
+        FinalString += count;
+      }
+      count = 1;
+      CurSym = input[i];
+    }
+  }
+  FinalString += CurSym;
+  if (count > 1) {
+    FinalString += count;
+  }
+  return FinalString;
 }
+
 
 module.exports = {
   getMinMax,
