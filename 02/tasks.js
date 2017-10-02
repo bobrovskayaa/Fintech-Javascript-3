@@ -37,6 +37,9 @@ function customBind(func, context, ...args) {
 function sum(a) {
   var FinSum = a;
 
+  if (a === undefined) {
+    return 0;
+  }
   return function add(b) {
     if (b === undefined) {
       return FinSum;
