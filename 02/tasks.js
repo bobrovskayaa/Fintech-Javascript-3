@@ -26,7 +26,7 @@ var customBind = (function(func, context, ...args) {
   return function(...args) {
     return func.apply(context, FixArgs.concat(args));
   };
-}());
+});
 
 /*= ============================================ */
 
