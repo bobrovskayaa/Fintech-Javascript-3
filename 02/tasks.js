@@ -1,9 +1,9 @@
-/**
+﻿/**
  * Исправьте проблему с таймером: должны выводиться числа от 0 до 9.
  * Доп. задание: предложите несколько вариантов решения.
  */
 function timer(logger = console.log) {
-  for (var i = 0; i < 10; i++) {
+  for (let i = 0; i < 10; i++) {
     setTimeout(() => {
       logger(i);
     }, 100);
@@ -20,7 +20,9 @@ function timer(logger = console.log) {
  * @return {Function} функция с нужным контекстом
  */
 function customBind(func, context, ...args) {
-
+  return function() {
+    return func.apply(context, arguments);
+  };
 }
 
 /*= ============================================ */
@@ -32,8 +34,17 @@ function customBind(func, context, ...args) {
  * sum :: Number -> sum
  * sum :: void -> Number
  */
-function sum(x) {
-  return 0;
+function sum(a) {
+  var FinSum = a;
+
+  return function add(b) {
+    if (b === undefined) {
+      return FinSum;
+    } else {
+      FinSum += b;
+      return add;
+    }
+  };
 }
 
 /*= ============================================ */
@@ -45,7 +56,7 @@ function sum(x) {
  * @return {boolean}
  */
 function anagram(first, second) {
-  return false;
+  return first.split('').sort().join() === second.split('').sort().join();
 }
 
 /*= ============================================ */
@@ -57,7 +68,20 @@ function anagram(first, second) {
  * @return {Array<number>} массив уникальных значений, отсортированный по возрастанию
  */
 function getUnique(arr) {
-  return [];
+
+  function cmp(a, b) {
+    if (a > b) return 1;
+    if (a < b) return -1;
+  }
+
+  arr.sort(cmp);
+  for (let i = 1; i < arr.length; ++i) {
+    if (arr[i] === arr[i - 1]) {
+      arr.splice(i, 1);
+      --i;
+    }
+  }
+  return arr;
 }
 
 /**
@@ -66,8 +90,15 @@ function getUnique(arr) {
  * @param {Array<number>, Array<number>} first, second исходные массивы
  * @return {Array<number>} массив уникальных значений, отсортированный по возрастанию
  */
-function getIntersection(first, second) {
-  return [];
+function getIntersection(first, second) { 
+  let FinalArr = [];
+
+  for (let i = 0; i < first.length; ++i) {
+    if (second.indexOf(first[i]) >= 0) {
+      FinalArr.splice(FinalArr.length, 0, first[i]);
+    }
+  }
+  return getUnique(FinalArr);
 }
 
 /* ============================================= */
@@ -86,7 +117,18 @@ function getIntersection(first, second) {
  * @return {boolean}
  */
 function isIsomorphic(left, right) {
+  if (left.length != right.length) {
+    return false;
+  } else {
+    let counter = 0;
 
+    for (let i = 0; i < left.length; ++i) {
+      if (left[i] != right[i]) {
+        ++counter;
+      }
+    }
+    return (counter < 2) ? true : false;
+  }
 }
 
 module.exports = {
