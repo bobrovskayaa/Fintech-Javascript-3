@@ -1,4 +1,5 @@
-﻿/**
+﻿/* eslint-disable max-statements */
+/**
  * Исправьте проблему с таймером: должны выводиться числа от 0 до 9.
  * Доп. задание: предложите несколько вариантов решения.
  */
@@ -19,13 +20,13 @@ function timer(logger = console.log) {
  * @param {Array<any>} args массив аргументов
  * @return {Function} функция с нужным контекстом
  */
-var customBind = function(func, context, ...args) {
+var customBind = (function(func, context, ...args) {
   var FixArgs = args;
 
   return function(...args) {
     return func.apply(context, FixArgs.concat(args));
   };
-};
+}());
 
 /*= ============================================ */
 
@@ -45,10 +46,9 @@ function sum(a) {
   return function add(b) {
     if (b === undefined) {
       return FinSum;
-    } else {
-      FinSum += b;
-      return add;
     }
+    FinSum += b;
+    return add;
   };
 }
 
