@@ -21,6 +21,7 @@ function timer(logger = console.log) {
  */
 var customBind = function(func, context, ...args) {
   var FixArgs = args;
+
   return function(...args) {
     return func.apply(context, FixArgs.concat(args));
   };
@@ -72,12 +73,14 @@ function anagram(first, second) {
  * @return {Array<number>} массив уникальных значений, отсортированный по возрастанию
  */
 function getUnique(arr) {
-
   function cmp(a, b) {
-    if (a > b) return 1;
-    if (a < b) return -1;
+    if (a > b) {
+      return 1;
+    }
+    if (a < b) {
+      return -1;
+    }
   }
-
   arr.sort(cmp);
   for (let i = 1; i < arr.length; ++i) {
     if (arr[i] === arr[i - 1]) {
@@ -94,7 +97,7 @@ function getUnique(arr) {
  * @param {Array<number>, Array<number>} first, second исходные массивы
  * @return {Array<number>} массив уникальных значений, отсортированный по возрастанию
  */
-function getIntersection(first, second) { 
+function getIntersection(first, second) {
   let FinalArr = [];
 
   for (let i = 0; i < first.length; ++i) {
@@ -121,18 +124,19 @@ function getIntersection(first, second) {
  * @return {boolean}
  */
 function isIsomorphic(left, right) {
-  if (left.length != right.length) {
-    return false;
-  } else {
+  if (left.length === right.length) {
     let counter = 0;
 
     for (let i = 0; i < left.length; ++i) {
-      if (left[i] != right[i]) {
+      if (left[i] !== right[i]) {
         ++counter;
       }
     }
-    return (counter < 2) ? true : false;
+    if (counter < 2) {
+      return true;
+    }
   }
+  return false;
 }
 
 module.exports = {
