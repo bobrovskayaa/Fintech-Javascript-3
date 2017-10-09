@@ -9,7 +9,7 @@ function promiseAll(promises) {
   let resolveValues = [];
   let rejectValue;
 
-  for (let i = 0; i < promises.lenght; i++) {
+  for (let i = 0; i < promises.length; i++) {
     promises[i].then(function(value) {
        resolveValues.push(value);
    }, function(error) {
