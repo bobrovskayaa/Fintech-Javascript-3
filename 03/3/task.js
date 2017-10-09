@@ -7,16 +7,16 @@
  */
 function promiseAll(promises) {
   let resolveValues = [];
-  let rejectValue;
+  let rejectValue = [];
 
   for (let i = 0; i < promises.length; i++) {
     promises[i].then(function(value) {
        resolveValues.push(value);
-   }, function(error) {
-       rejectValue = error;
+   }, function (error) {
+      rejectValue.push(error);      
    });
-    if (typeof(rejectValue) != 'undefined') {
-      return Promise.reject(rejectValue);
+    if (rejectValue.length > 0) {
+      return Promise.reject(rejectValue[0]);
     }
   }
   return Promise.resolve(resolveValues);
