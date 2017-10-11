@@ -12,7 +12,7 @@ function promiseAll(promises) {
 
     promises.forEach((promise, i) => {
       promise.then((value) => {
-        resolveValues.push(value);
+        resolveValues[i] = value;
         if (resolveValues.length === promises.length) {
           resolve(resolveValues);
         }
