@@ -8,7 +8,6 @@
 function promiseAll(promises) {
   return new Promise((resolve, reject) => { 
     const resolveValues = [];
-    const rejectError = [];
 
     promises.forEach((promise, i) => {
       promise.then((value) => {
