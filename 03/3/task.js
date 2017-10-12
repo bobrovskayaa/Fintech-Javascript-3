@@ -6,12 +6,12 @@
  * @return {Promise}
  */
 function promiseAll(promises) {
-  return new Promise((resolve, reject) => { 
+  return new Promise((resolve, reject) => {
     const resolveValues = [];
     let len = 0;
 
     promises.forEach((promise, i) => {
-      promise.then((value) => {
+      promise.then(value => {
         resolveValues[i] = value;
         ++len;
         if (len === promises.length) {
