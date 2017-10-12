@@ -8,25 +8,24 @@
  * */
 function strIntoArray(str) {
   const dict = {
-    I: 1, IV: 4, V: 5, IX: 9, X: 10, XL: 40, L: 50, XC: 90, C: 100,
-    CD: 400, D: 500, CM: 900, M: 1000 
+    I: 1, IV: 4, V: 5, IX: 9, X: 10, XL: 40, L: 50, XC: 90, C: 100, CD: 400, D: 500, CM: 900, M: 1000 
   };
   let finalNum = 0;
   const checkedSymb = [];
-  const finalArray = []
-  
+  const finalArray = [];
+
   if (str.length === 1) {
     finalNum += dict[str[0]];
     checkedSymb[0] = 1;
   }
   for (let i = 1; i < str.length; ++i) {
-    if (str[i-1]+str[i] in dict && checkedSymb[i-1] !== 1 && checkedSymb[i] !== 1) {
-      checkedSymb[i-1] = 1;
+    if (str[i - 1] + str[i] in dict && checkedSymb[i - 1] !== 1 && checkedSymb[i] !== 1) {
+      checkedSymb[i - 1] = 1;
       checkedSymb[i] = 1;
-      finalNum += dict[str[i-1]+str[i]];
-    } else if (str[i-1] in dict && checkedSymb[i-1] !== 1) {
-      checkedSymb[i-1] = 1;
-      finalNum += dict[str[i-1]];
+      finalNum += dict[str[i - 1] + str[i]];
+    } else if (str[i - 1] in dict && checkedSymb[i - 1] !== 1) {
+      checkedSymb[i - 1] = 1;
+      finalNum += dict[str[i - 1]];
     }
   }
   if (checkedSymb[str.length - 1] !== 1) {
@@ -45,3 +44,4 @@ const proxy = new Proxy(proto, {
   }
 });
 Object.setPrototypeOf(Number.prototype, proxy);
+
