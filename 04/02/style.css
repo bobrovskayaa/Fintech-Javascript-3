@@ -1,0 +1,55 @@
+table.table1 {
+  width: 100%;
+  table-layout: fixed;
+  border: none;
+  border-collapse: collapse; /* Убираем двойные линии между ячейками */
+  background: gray; /* Цвет фона нечетных строк */
+}
+caption.capt1 {
+  background: #009BFF;
+  border-bottom: 1px solid black;;
+}
+td { 
+  border: none;
+}
+td.overflow {  
+  white-space: nowrap; /* Отменяем перенос текста */
+  overflow: hidden; /* Обрезаем содержимое */
+  text-overflow: ellipsis; /* Многоточие */}
+td.wrap {
+  word-wrap: break-word; /* Перенос слов */ 
+}
+tr.even {
+  background: #fff8dc; /* Цвет фона четных строк */
+}
+tbody tr:hover {
+  background: #f3bd48; /* Цвет фона при наведении */
+}
+
+table.table2 { 
+  border-spacing: 8px;
+}
+td.col1 { 
+  background: #00CB82;
+  padding: 8px;
+}
+td.col2 { 
+  background: #00D89A;
+  padding: 8px;
+}
+td.col3 { 
+  background: #00E4BD;
+  padding: 8px;
+}
+td.col4 { 
+  background: #00EDE9;
+  padding: 8px;
+}
+td.col5 { 
+  background: #00CBF6;
+  padding: 8px;
+}
+td.col6 { 
+  background: #009BFF;
+  padding: 8px;
+}

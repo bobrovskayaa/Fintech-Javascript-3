@@ -1,0 +1,18 @@
+ul.color_markers {
+  color: yellow;
+}
+ul.color_markers li {
+  list-style-type: disc;
+}
+ul.color_markers li span {
+  color: black; //текущий цвет текста на странице
+}
+ol.color_markers_2 {
+  color: blue;
+}
+ol.color_markers_2 li {
+  list-style-type: decimal;
+}
+ol.color_markers_2 li span {
+  color: black;
+}
