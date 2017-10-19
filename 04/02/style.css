@@ -15,7 +15,7 @@ table.table1 td:nth-child(1) {
 }
 
 table.table1 td:nth-child(2) {
-	word-wrap: break-word; /* Перенос слов */ 
+  word-wrap: break-word; /* Перенос слов */
 }
 
 th.capt1 {
