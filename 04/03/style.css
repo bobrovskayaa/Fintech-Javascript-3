@@ -1,18 +1,21 @@
-ul.color_markers {
-  color: yellow;
+li.col1 {
+  list-style-type: none; /* Прячем исходные маркеры */
 }
-ul.color_markers li {
-  list-style-type: disc;
+li.col1:before {
+  color: yellow; /* Цвет маркера */
+  content: "•"; /* Сам маркер */
+  padding-right: 10px; /* Расстояние от маркера до текста */
 }
-ul.color_markers li span {
-  color: black; //текущий цвет текста на странице
+
+ol {
+  counter-reset: list1;
 }
-ol.color_markers_2 {
-  color: blue;
+
+li.col2 {
+  list-style: none;
 }
-ol.color_markers_2 li {
-  list-style-type: decimal;
-}
-ol.color_markers_2 li span {
-  color: black;
-}
+li.col2:before {
+  color: blue; /* Цвет маркера */
+  counter-increment: list1; /* Увеличиваем значение счетчика */
+  content: counter(list1) ". "; /* Выводим число */
+} 

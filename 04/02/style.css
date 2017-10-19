@@ -3,27 +3,26 @@ table.table1 {
   table-layout: fixed;
   border: none;
   border-collapse: collapse; /* Убираем двойные линии между ячейками */
-  background: gray; /* Цвет фона нечетных строк */
 }
-caption.capt1 {
+table.table1 tr:nth-child(even) {background: #00CB82;}
+table.table1 tr:nth-child(odd) {background: gray;}
+table.table1 tr:hover {background: #f3bd48;}
+table.table1 td:nth-child(1) {  
+  white-space: nowrap; /* Отменяем перенос текста */
+  overflow: hidden; /* Обрезаем содержимое */
+  text-overflow: ellipsis; /* Многоточие */
+}
+table.table1 td:nth-child(2) {  
+  word-wrap: break-word; /* Перенос слов */ 
+}
+
+th.capt1 {
+  align: "center";
   background: #009BFF;
   border-bottom: 1px solid black;;
 }
 td { 
   border: none;
-}
-td.overflow {  
-  white-space: nowrap; /* Отменяем перенос текста */
-  overflow: hidden; /* Обрезаем содержимое */
-  text-overflow: ellipsis; /* Многоточие */}
-td.wrap {
-  word-wrap: break-word; /* Перенос слов */ 
-}
-tr.even {
-  background: #fff8dc; /* Цвет фона четных строк */
-}
-tbody tr:hover {
-  background: #f3bd48; /* Цвет фона при наведении */
 }
 
 table.table2 { 
