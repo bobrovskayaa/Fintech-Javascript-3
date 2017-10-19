@@ -1,6 +1,10 @@
 a {
   color: #1d6152; /* Цвет ссылок */
 }
+
+img.img1 {
+	width: 35%;
+}
 a:visited {
   color: black; /* Цвет посещенных ссылок */
 }
@@ -72,11 +76,25 @@ p.p2 {
   display: inline-block;
 }
 
-Ya.share2('my-share', {
-  content: {
-    url: 'https://bobrovskayaa.github.io/Fintech-Javascript-3/04/01/',
-      title: 'Блог Наташи про Паланика',
-      description: 'Да-да-да. Это правда. Наташа пишет про Паланика.',
-      image: 'https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg'   
-  }
-});
+.enum2 {
+  font-family: Roboto;
+  font-size: 80%; 
+  letter-spacing: 0.08em;
+  background-color: #fff;
+  display: inline-block;
+}
+
+#containingBlock {
+  width:50%;
+}
+.Wrapper {
+  padding-bottom: 56.25%;
+  padding-top: 25px;
+}
+.Wrapper object,
+.Wrapper embed {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
