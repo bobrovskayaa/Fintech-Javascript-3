@@ -4,19 +4,17 @@ a {
 
 img.img1 {
   float: right;
-	width: 35%;
+  width: 35%;
   margin: 10px;
 }
+
 a:visited {
   color: black; /* Цвет посещенных ссылок */
 }
 
 div {
   width: 960px; /* Ширина слоя */
-  margin-left: auto; /* Выравниваем по центру */
-  margin-right: auto;
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin: 40px auto;
 }
 
 h1 {
@@ -64,11 +62,11 @@ p {
 }
 
 p.p1 {
-  font-size: 90%; 
+  font-size: 90%;
 }
 
 p.p2 {
-  font-size: 80%; 
+  font-size: 80%;
 }
 
 .enum {
@@ -80,7 +78,7 @@ p.p2 {
 
 .enum2 {
   font-family: Roboto;
-  font-size: 80%; 
+  font-size: 80%;
   letter-spacing: 0.08em;
   background-color: #fff;
   display: inline-block;
@@ -88,7 +86,7 @@ p.p2 {
 
 .Wrapper {
   padding-bottom: 56.25%;
-  width:50%;
+  width: 50%;
 }
 
 iframe {
