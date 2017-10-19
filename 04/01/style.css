@@ -4,7 +4,7 @@ a {
 
 img.img1 {
   float: right;
-  width: 35%;
+	width: 35%;
   margin: 10px;
 }
 a:visited {
@@ -86,14 +86,11 @@ p.p2 {
   display: inline-block;
 }
 
-#containingBlock {
-  width:50%;
-}
 .Wrapper {
   padding-bottom: 56.25%;
-  padding-top: 25px;
+  width:50%;
 }
-.Wrapper object,
-.Wrapper embed {
-  width: 100%;
+
+iframe {
+  border: 0;
 }
