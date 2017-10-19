@@ -1,0 +1,82 @@
+a {
+  color: #1d6152; /* Цвет ссылок */
+}
+a:visited {
+  color: black; /* Цвет посещенных ссылок */
+}
+
+div {
+  width: 960px; /* Ширина слоя */
+  margin-left: auto; /* Выравниваем по центру */
+  margin-right: auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+h1 {
+  font-family: Roboto Condensed;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  background-image: url(http://tobiasahlin.com/images/typesource/leaves.jpg);
+  background-color: #2b5a33;
+  background-size: cover;
+  padding: 4em 6em 7.5em;
+}
+
+h2 {
+  font-family: Roboto;
+  font-size: 2.7em;
+  font-weight: 100;
+  line-height: 1em;
+  letter-spacing: 0.64em;
+  color: #1d6152;
+  background-color: #fff;
+  display: inline-block;
+  padding: 0.65em 0 0.65em 0.7em;
+}
+
+h3 {
+  font-family: Roboto;
+  font-size: 1.7em;
+  font-weight: 50;
+  line-height: 1em;
+  letter-spacing: 0.45em;
+  color: #1d6152;
+  background-color: #fff;
+  display: inline-block;
+  margin-top: -0.7em;
+  padding: 0.65em 0 0.65em 0.7em;
+}
+
+p {
+  font-family: Roboto;
+  letter-spacing: 0.08em;
+  background-color: #fff;
+  display: inline-block;
+  padding: 0.65em 0 0.65em 0.7em;
+}
+
+p.p1 {
+  font-size: 90%; 
+}
+
+p.p2 {
+  font-size: 80%; 
+}
+
+.enum {
+  font-family: Roboto;
+  letter-spacing: 0.08em;
+  background-color: #fff;
+  display: inline-block;
+}
+
+Ya.share2('my-share', {
+  content: {
+    url: 'https://bobrovskayaa.github.io/Fintech-Javascript-3/04/01/',
+      title: 'Блог Наташи про Паланика',
+      description: 'Да-да-да. Это правда. Наташа пишет про Паланика.',
+      image: 'https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg'   
+  }
+});
