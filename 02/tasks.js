@@ -1,9 +1,9 @@
-/**
+﻿/**
  * Исправьте проблему с таймером: должны выводиться числа от 0 до 9.
  * Доп. задание: предложите несколько вариантов решения.
  */
 function timer(logger = console.log) {
-  for (var i = 0; i < 10; i++) {
+  for (let i = 0; i < 10; i++) {
     setTimeout(() => {
       logger(i);
     }, 100);
@@ -19,9 +19,15 @@ function timer(logger = console.log) {
  * @param {Array<any>} args массив аргументов
  * @return {Function} функция с нужным контекстом
  */
-function customBind(func, context, ...args) {
+var customBind = (function() {
+  return function(func, context, ...args) {
+    var FixArgs = args;
 
-}
+    return function(...args) {
+      return func.apply(context, FixArgs.concat(args));
+    };
+  };
+}());
 
 /*= ============================================ */
 
@@ -32,8 +38,19 @@ function customBind(func, context, ...args) {
  * sum :: Number -> sum
  * sum :: void -> Number
  */
-function sum(x) {
-  return 0;
+function sum(a) {
+  var FinSum = a;
+
+  if (a === undefined) {
+    return 0;
+  }
+  return function add(b) {
+    if (b === undefined) {
+      return FinSum;
+    }
+    FinSum += b;
+    return add;
+  };
 }
 
 /*= ============================================ */
@@ -45,7 +62,7 @@ function sum(x) {
  * @return {boolean}
  */
 function anagram(first, second) {
-  return false;
+  return first.split('').sort().join() === second.split('').sort().join();
 }
 
 /*= ============================================ */
@@ -57,7 +74,22 @@ function anagram(first, second) {
  * @return {Array<number>} массив уникальных значений, отсортированный по возрастанию
  */
 function getUnique(arr) {
-  return [];
+  function cmp(a, b) {
+    if (a > b) {
+      return 1;
+    }
+    if (a < b) {
+      return -1;
+    }
+  }
+  arr.sort(cmp);
+  for (let i = 1; i < arr.length; ++i) {
+    if (arr[i] === arr[i - 1]) {
+      arr.splice(i, 1);
+      --i;
+    }
+  }
+  return arr;
 }
 
 /**
@@ -67,7 +99,14 @@ function getUnique(arr) {
  * @return {Array<number>} массив уникальных значений, отсортированный по возрастанию
  */
 function getIntersection(first, second) {
-  return [];
+  let FinalArr = [];
+
+  for (let i = 0; i < first.length; ++i) {
+    if (second.indexOf(first[i]) >= 0) {
+      FinalArr.splice(FinalArr.length, 0, first[i]);
+    }
+  }
+  return getUnique(FinalArr);
 }
 
 /* ============================================= */
@@ -86,7 +125,19 @@ function getIntersection(first, second) {
  * @return {boolean}
  */
 function isIsomorphic(left, right) {
+  if (left.length === right.length) {
+    let counter = 0;
 
+    for (let i = 0; i < left.length; ++i) {
+      if (left[i] !== right[i]) {
+        ++counter;
+      }
+    }
+    if (counter < 2) {
+      return true;
+    }
+  }
+  return false;
 }
 
 module.exports = {
