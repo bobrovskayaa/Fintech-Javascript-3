@@ -10,13 +10,7 @@
  */
 class NumberAndString {
   constructor(str) {
-    this.obj = str;
-  }
-  toString() {
-    return this.obj;
-  }
-  valueOf() {
-    return this.obj.length;
+
   }
 }
 

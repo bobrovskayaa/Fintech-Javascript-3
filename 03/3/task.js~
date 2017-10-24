@@ -6,20 +6,17 @@
  * @return {Promise}
  */
 function promiseAll(promises) {
-  return new Promise((resolve, reject) => {
-    const resolveValues = [];
-    let len = 0;
+  return new Promise((resolve, reject) => { 
+    let resolveValues = [];
 
-    promises.forEach((promise, i) => {
-      promise.then(value => {
-        resolveValues[i] = value;
-        ++len;
-        if (len === promises.length) {
-          resolve(resolveValues);
-        }
-      },
-      reject);
-    });
+    for (let i = 0; i < promises.length; i++) {
+      promises[i].then((value) => {
+        resolveValues.push(value);
+      }, (error) => {
+        reject(error);
+      });
+    }
+    resolve(resolveValues);
   });
 }
 
