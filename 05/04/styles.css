@@ -1,0 +1,100 @@
+.myform {
+    margin: 0px 270px;
+}
+
+.myfield {
+    height: 66px;
+    border-radius: 6px;
+    background-color: #eef2f7;
+    margin: 24px 10%;
+    min-width: 80%;
+    border: none;
+    padding: 19px;
+}
+
+.myfield-white {
+    height: 66px;
+    border-radius: 6px;
+    background-color: #ffffff;
+    min-width: 100%;
+    border: 10px;
+    padding: 19px;
+}
+
+label.radio-inline.myradio {
+    padding-left:0px;
+}
+
+.myradio {
+    width: 35%;
+    min-height: 66px;
+    border-radius: 6px;
+    background-color: #ffffff;
+    border: solid 1px #dddfe0;
+}
+
+.radio-div {
+    display: flex;
+    justify-content: space-around;
+}
+
+.mybutton {
+    width: 258px;
+    height: 66px;
+    border-radius: 6px;
+    background-color: #ffdd2d;
+    margin: auto;
+}
+
+.mybutton-apply {
+    width: 86px;
+    height: 20px;
+    font-family: Roboto;
+    font-size: 17px;
+    color: #333333;
+    margin: auto;
+}
+
+.mybutton-div {
+    width: 258px;
+    height: 66px;
+    margin: 50px auto;
+}
+
+input[type="radio"] {
+    display:none; 
+    margin-right: 18px;  
+    float: right;         
+}
+ 
+input[type="radio"] + label {
+  font: 18px bold;
+  color: #444;
+  cursor: pointer;
+  height: 30px;
+  width: 100%;
+}
+
+input[type="radio"] + label::before {
+    content: "";
+    display: inline-block;
+    height: 18px;
+    width: 18px;
+    margin: 0 5px 0 0;
+    background-image: url(img/group-yellow.svg);
+    background-repeat: no-repeat;
+    height: 30px;
+    float: right;
+}
+input[type="radio"] + label::before {
+    background-image: url(img/group-gray.svg);
+    height: 30px;
+    width: 30px;
+    float: right;
+}
+input[type="radio"]:checked + label::before {
+    background-image: url(img/group-yellow.svg);
+    height: 30px;
+    width: 30px;
+    float: right;
+}
