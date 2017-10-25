@@ -3,6 +3,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <link href="styles.css" rel="stylesheet">
+    <script src="scripts.js" async></script>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
     <title>Задание 5.4</title>
 </head>
@@ -16,5 +17,40 @@
     <a href="https://zeplin.io/">zeplin.io</a>, и попросить доступ у Евгения Мамаева.
 </p>
 <img src="./task.png" alt="">
-</body>
+<br>
+<h1>Форма:</h1>
+    <form class="myform">
+        <fieldset>
+            <div class="div-first">
+                <input type="text" class="myfield" placeholder="ФИО"><br>
+                <input type="text" class="myfield" placeholder="Город проживания" pattern="[А-Яа-яЁё]"
+                title="Для заполнения этого поля не допустимо использовать буквы латинского алфавита"><br>
+                <input type="text" class="myfield" placeholder="Мобильный телефон"><br>
+                <input type="text" class="myfield" placeholder="Электронная почта" 
+                    data-toggle="tooltip" data-placement="left" 
+                    title="Ваши данные замаскированы в целях безопасности. Для изменения информации с вами свяжется оператор колл-центра."><br>
+            </div> 
+            <div class="radio-div">
+                <label class="radio-inline myradio">
+                    <div class="myfield-white">
+                        <input id="rfirst" type="radio" name="radio" checked hidden />
+                        <label for="rfirst">Одно</label>
+                    </div>
+                </label>
+                <label class="radio-inline myradio">
+                    <div class="myfield-white">
+                        <input id="rsecond" type="radio" name="radio" hidden />
+                        <label for="rsecond">Другое</label>
+                    </div>
+                </label>
+            </div>
+            <div class="mybutton-div">
+                <button class="mybutton" type="submit" class="btn"><p class="mybutton-apply">Отправить</p></button>
+            </div>
+        </fieldset>    
+    </form>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js" integrity="VjEeINv9OSwtWFLAtmc4JCtEJXXBub00gtSnszmspDLCtC0I4z4nqz7rEFbIZLLU" crossorigin="anonymous"></script>
+  </body>
 </html>
