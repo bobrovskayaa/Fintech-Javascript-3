@@ -27,6 +27,7 @@ a.menu-item {
   font-size: 13px;
   letter-spacing: 0.9px;
   color: #fff;
+  text-transform: uppercase
 }
 
 a.menu-item:hover {
@@ -34,4 +35,5 @@ a.menu-item:hover {
   border-bottom: 3px solid #ffdd2d;
   padding-bottom: 19px;
   text-decoration: none;
+  text-transform: uppercase
 }

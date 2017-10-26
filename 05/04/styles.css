@@ -31,7 +31,7 @@
   border-radius: 6px !important;
   border: solid 1px #d0011b !important;
   margin-top: 24px !important;
-  margin-bottom: 24px !important;
+  margin-bottom: 11px !important;
 }
 
 .div-danger {
@@ -72,6 +72,8 @@
   font-size: 13px;
   color: #d0021b;
   margin: auto;
+  margin-top: 11px;
+  margin-bottom: 28px;
 }
 
 .radio-text {
@@ -80,7 +82,7 @@
   font-family: Roboto;
   font-size: 21px;
   font-weight: 300;
-  margin: 15px auto 27px;
+  margin: 39px auto 27px;
   color: #333;
 }
 
