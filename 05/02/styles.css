@@ -1,10 +1,14 @@
 .mask {
-    height: 413px;
-    background-image: linear-gradient(to right, #1489e7, #003e82);
+  width: 1080px;
+  height: 413px;
+  background-image: linear-gradient(to right, #1489e7, #003e82);
+  overflow: hidden;
+
 }
 
 .img-card {
-    height: 413px;
+  height: 550px;
+  margin: -88px 0 0 -52px;
 }
 
 .banner-big {
@@ -43,4 +47,5 @@
   line-height: 1.41;
   text-align: center;
   background-color: #ffdd2d;
+  border: none;
 }

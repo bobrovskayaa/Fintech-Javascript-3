@@ -1,8 +1,3 @@
-$(function(){
-  $('#form').validator({
-    feedback: {
-      success: 'glyphicon-thumbs-up',
-      error: 'glyphicon-thumbs-down'
-    }
-  });
-});
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })

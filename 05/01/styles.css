@@ -1,10 +1,24 @@
 .menu-dark {
-    display: flex;
+    list-style: none;
     height: 65px;
     background-color: #3e4757;
-    flex-flow: row nowrap;
-    justify-content: space-around;
-    align-items: center;
+    text-align: center;
+    width: 1080px;
+    margin: auto;
+    padding-left: 0;
+    padding-top: 25px;
+}
+
+li {
+    display: inline;
+    margin-left: 31px;
+    margin-right: 31px;
+}
+
+.line-dark {
+    height: 65px;
+    background-color: #3e4757;
+    width: 100%;
 }
 
 a.menu-item {
@@ -18,7 +32,7 @@ a.menu-item {
 a.menu-item:hover {
     color: #ffffff;
     border-bottom: 3px solid #ffdd2d;
-    padding-bottom: 22px;
+    padding-bottom: 19px;
     text-decoration: none;
 }
 

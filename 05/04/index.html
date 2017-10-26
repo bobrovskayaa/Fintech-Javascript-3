@@ -5,7 +5,9 @@
     <link href="styles.css" rel="stylesheet">
     <script src="scripts.js" async></script>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400&amp;subset=cyrillic" rel="stylesheet">
     <title>Задание 5.4</title>
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
 </head>
 <body>
 <h1>Сверстать форму. Pixel-perfect. Select делать не нужно</h1>
@@ -19,28 +21,49 @@
 <img src="./task.png" alt="">
 <br>
 <h1>Форма:</h1>
+<div>
     <form class="myform">
         <fieldset>
-            <div class="div-first">
-                <input type="text" class="myfield" placeholder="ФИО"><br>
-                <input type="text" class="myfield" placeholder="Город проживания" pattern="[А-Яа-яЁё]"
-                title="Для заполнения этого поля не допустимо использовать буквы латинского алфавита"><br>
-                <input type="text" class="myfield" placeholder="Мобильный телефон"><br>
-                <input type="text" class="myfield" placeholder="Электронная почта" 
-                    data-toggle="tooltip" data-placement="left" 
-                    title="Ваши данные замаскированы в целях безопасности. Для изменения информации с вами свяжется оператор колл-центра."><br>
-            </div> 
+            <div class="myfield">
+                <!--img alt="Selector arrow" class="arrow" src="arrow.svg"-->
+                <input class="myinput" placeholder="ФИО">
+            </div>
+            <div class="myfield-danger">
+                <div class="div-danger"><input class="myinput-danger" placeholder="Город проживания"></div>
+                <div class="symb1">
+                    <button class="symb-button"><img src="img/symbol1.svg" alt=""></button>
+                </div>
+            </div>
+            <div class="error-message">
+                Для заполнения этого поля не допустимо использовать буквы латинского алфавита
+            </div>
+            <div class="myfield">
+                <input class="myinput" placeholder="Мобильный телефон">
+            </div>
+            <div class="myfield">
+                    <div class="div-danger"><input class="myinput" placeholder="Электронная почта"></div>
+                    <div class="symb1">
+                            <button type="button" class="btn btn-default symb-button" data-toggle="tooltip" 
+                                data-placement="left" title="Ваши данные замаскированы в целях безопасности. Для изменения информации с вами свяжется оператор колл-центра.">
+                                <img src="img/symbol2.svg" alt="">
+                            </button>
+                     
+                    </div>
+            </div>
+            <div class="radio-text">
+                Выберите это или другое
+            </div>
             <div class="radio-div">
                 <label class="radio-inline myradio">
                     <div class="myfield-white">
                         <input id="rfirst" type="radio" name="radio" checked hidden />
-                        <label for="rfirst">Одно</label>
+                        <label for="rfirst"><div class="radio-label">Это</div></label>
                     </div>
                 </label>
                 <label class="radio-inline myradio">
                     <div class="myfield-white">
                         <input id="rsecond" type="radio" name="radio" hidden />
-                        <label for="rsecond">Другое</label>
+                        <label for="rsecond"><div class="radio-label">Другое</div></label>
                     </div>
                 </label>
             </div>
@@ -49,8 +72,8 @@
             </div>
         </fieldset>    
     </form>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js" integrity="VjEeINv9OSwtWFLAtmc4JCtEJXXBub00gtSnszmspDLCtC0I4z4nqz7rEFbIZLLU" crossorigin="anonymous"></script>
-  </body>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js" integrity="VjEeINv9OSwtWFLAtmc4JCtEJXXBub00gtSnszmspDLCtC0I4z4nqz7rEFbIZLLU" crossorigin="anonymous"></script>
+</body>
 </html>
