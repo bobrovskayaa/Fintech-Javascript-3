@@ -74,17 +74,18 @@
 
 
 .myfield-white {
+    width: 258px;
     height: 66px;
     border-radius: 6px;
     background-color: #ffffff;
-    min-width: 100%;
     border: 10px;
-    padding: 19px;
+   
 }
 
 .radio-text {
     width: 245px;
     height: 24px;
+    margin: 0px;
     font-family: Roboto;
     font-size: 21px;
     font-weight: 300;
@@ -99,10 +100,11 @@ label.radio-inline.myradio {
 .myradio {
     width: 258px;
     min-height: 66px;
-    margin: 0px;
     border-radius: 6px;
     background-color: #ffffff;
     border: solid 1px #dddfe0;
+    padding: 19px;
+    padding-left: 19px !important;
 }
 
 .radio-label {
@@ -126,11 +128,7 @@ label.radio-inline.myradio {
     background-color: #ffdd2d;
     margin: auto;
     border: none;
-}
-
-.mybutton-apply {
-    width: 86px;
-    height: 20px;
+    padding: auto;
     font-family: Roboto;
     font-size: 17px;
     color: #333333;
