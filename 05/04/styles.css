@@ -172,7 +172,7 @@ input[type="radio"]:checked + label::before {
   border-radius: 6px !important;
   background-color: #fff !important;
   border: solid 1px #dddfe0 !important;
-  border-bottom: 1px dotted #0077aa;
+  border-bottom: 1px dotted #07a;
   cursor: help;
 }
 
