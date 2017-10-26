@@ -1,221 +1,204 @@
 .myform {
-    margin: auto;
-    width: 540px;
+  margin: auto;
+  width: 540px;
 }
 
 .myfield {
-    display: flex;
-    height: 66px !important;
-    width: 540px !important;
-    border-radius: 6px !important;
-    background-color: #eef2f7 !important;
-    margin: 24px 0px !important;
-    border: none !important;
+  display: flex;
+  height: 66px !important;
+  width: 540px !important;
+  border-radius: 6px !important;
+  background-color: #eef2f7 !important;
+  margin-top: 24px !important;
+  margin-bottom: 24px !important;
+  border: none !important;
 }
 
 .myinput {
-    width: 540px;
-    height: 66px;
-    background-color: #eef2f7;
-    padding: 23px 18px 23px 20px;
-    border: none;
-    border-radius: 6px;
-    outline: none;
- }
+  width: 540px;
+  height: 66px;
+  background-color: #eef2f7;
+  padding: 23px 18px 23px 20px;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+}
 
 .myfield-danger {
-    display: flex;
-    height: 66px !important;
-    width: 540px !important;
-    border-radius: 6px !important;
-    border: solid 1px #d0011b !important;
-    margin: 24px 0px;
+  display: flex;
+  height: 66px !important;
+  width: 540px !important;
+  border-radius: 6px !important;
+  border: solid 1px #d0011b !important;
+  margin-top: 24px !important;
+  margin-bottom: 11px !important;
 }
 
 .div-danger {
-    display:inline;
-    width: 498px;
-    height: 64px;
-    border: none;
-    border-radius: 6px;
-    outline: none;
+  display: inline;
+  width: 498px;
+  height: 64px;
+  border: none;
+  border-radius: 6px;
+  outline: none;
 }
 
 .myinput-danger {
-    padding: 23px 18px 23px 20px;
-    width: 498px;
-    height: 64px;
-    border: none;
-    border-radius: 6px;
-    outline: none;
- }
-
- .symb1 {
-    display:inline;
-    width: 24px;
-    height: 24px;
-    margin: 21px 17px 21px auto;
+  padding: 23px 18px 23px 20px;
+  width: 498px;
+  height: 64px;
+  border: none;
+  border-radius: 6px;
+  outline: none;
 }
 
- .symb-button {
-    background: none !important;
-    border: none !important;
-    padding: 0 !important;
+.symb1 {
+  display: inline;
+  width: 24px;
+  height: 24px;
+  margin: 21px 17px 21px auto;
+}
+
+.symb-button {
+  background: none !important;
+  border: none !important;
+  padding: 0 !important;
 }
 
 .error-message {
-    width: 523px;
-    height: 15px;
-    font-family: Roboto;
-    font-size: 13px;
-    color: #d0021b;
-    margin:auto;
-}
-
-
-.myfield-white {
-    height: 66px;
-    border-radius: 6px;
-    background-color: #ffffff;
-    min-width: 100%;
-    border: 10px;
-    padding: 19px;
+  width: 523px;
+  height: 15px;
+  font-family: Roboto;
+  font-size: 13px;
+  color: #d0021b;
+  margin: auto;
+  margin-top: 11px;
+  margin-bottom: 28px;
 }
 
 .radio-text {
-    width: 245px;
-    height: 24px;
-    font-family: Roboto;
-    font-size: 21px;
-    font-weight: 300;
-    margin: 15px auto 27px;
-    color: #333333;
-}
-
-label.radio-inline.myradio {
-    padding-left:0px;
+  width: 245px;
+  height: 24px;
+  font-family: Roboto;
+  font-size: 21px;
+  font-weight: 300;
+  margin: 39px auto 27px;
+  color: #333;
 }
 
 .myradio {
-    width: 258px;
-    min-height: 66px;
-    margin: 0px;
-    border-radius: 6px;
-    background-color: #ffffff;
-    border: solid 1px #dddfe0;
+  width: 258px;
+  min-height: 66px;
+  border-radius: 6px;
+  background-color: #fff;
+  border: solid 1px #dddfe0;
+  padding: 19px;
+  padding-left: 19px !important;
 }
 
 .radio-label {
-    width: 30px;
-    height: 20px;
-    font-family: Roboto;
-    font-size: 17px;
-    color: #333333;
-    margin: 2px auto 6px -1px;
+  width: 30px;
+  height: 20px;
+  font-family: Roboto;
+  font-size: 17px;
+  color: #333;
+  margin: 2px auto 6px -1px;
 }
 
 .radio-div {
-    display: flex;
-    justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
 }
 
 .mybutton {
-    width: 258px;
-    height: 66px;
-    border-radius: 6px;
-    background-color: #ffdd2d;
-    margin: auto;
-    border: none;
-}
-
-.mybutton-apply {
-    width: 86px;
-    height: 20px;
-    font-family: Roboto;
-    font-size: 17px;
-    color: #333333;
-    margin: auto;
+  width: 258px;
+  height: 66px;
+  border-radius: 6px;
+  background-color: #ffdd2d;
+  border: none;
+  padding: auto;
+  font-family: Roboto;
+  font-size: 17px;
+  color: #333;
+  margin: auto;
 }
 
 .mybutton-div {
-    width: 258px;
-    height: 66px;
-    margin: 49px auto;
+  width: 258px;
+  height: 66px;
+  margin: 49px auto;
 }
 
 input[type="radio"] {
-    display:none; 
-    margin-right: 18px;  
-    float: right;         
+  display: none;
+  margin-right: 18px;
+  float: right;
 }
 
 input[type="radio"] + label {
-    font: 18px bold;
-    color: #444;
-    cursor: pointer;
-    height: 30px;
-    width: 100%;
+  font: 18px bold;
+  color: #444;
+  cursor: pointer;
+  height: 30px;
+  width: 100%;
 }
 
 input[type="radio"] + label::before {
-    content: "";
-    display: inline-block;
-    height: 18px;
-    width: 18px;
-    margin: 0 5px 0 0;
-    background-image: url(img/group-yellow.svg);
-    background-repeat: no-repeat;
-    height: 30px;
-    float: right;
+  content: "";
+  display: inline-block;
+  margin: 0 5px 0 0;
+  background-image: url(img/group-yellow.svg);
+  background-repeat: no-repeat;
+  height: 30px;
+  width: 30px;
+  float: right;
 }
+
 input[type="radio"] + label::before {
-    background-image: url(img/group-gray.svg);
-    height: 30px;
-    width: 30px;
-    float: right;
+  background-image: url(img/group-gray.svg);
+  height: 30px;
+  width: 30px;
+  float: right;
 }
+
 input[type="radio"]:checked + label::before {
-    background-image: url(img/group-yellow.svg);
-    height: 30px;
-    width: 30px;
-    float: right;
+  background-image: url(img/group-yellow.svg);
+  height: 30px;
+  width: 30px;
+  float: right;
 }
 
 .tooltip {
-    width: 284px !important;
-    height: 104px !important;
-    border-radius: 6px !important;
-    background-color: #ffffff !important;
-    border: solid 1px #dddfe0 !important;
-    
-	border-bottom: 1px dotted #0077AA;
-	cursor: help;
+  width: 284px !important;
+  height: 104px !important;
+  border-radius: 6px !important;
+  background-color: #fff !important;
+  border: solid 1px #dddfe0 !important;
+  border-bottom: 1px dotted #07a;
+  cursor: help;
 }
 
 .tooltip::after {
-    width: 284px !important;
-    height: 104px !important;
-    border-radius: 6px !important;
-    background-color: #ffffff !important;
-    border: solid 1px #dddfe0 !important;
-
-	content: attr(data-tooltip); /* Главная часть кода, определяющая содержимое всплывающей подсказки */
-	margin-top: -24px;
-	opacity: 0; /* Наш элемент прозрачен... */
-	padding: 3px 7px;
-	position: absolute;
-	visibility: hidden; /* ...и скрыт. */
-			
-	transition: all 0.4s ease-in-out; /* Добавить плавности по вкусу */
+  width: 284px !important;
+  height: 104px !important;
+  border-radius: 6px !important;
+  background-color: #fff !important;
+  border: solid 1px #dddfe0 !important;
+  content: attr(data-tooltip);
+  margin-top: -24px;
+  opacity: 0; /* Наш элемент прозрачен... */
+  padding: 3px 7px;
+  position: absolute;
+  visibility: hidden; /* ...и скрыт. */
+  transition: all 0.4s ease-in-out; /* Добавить плавности по вкусу */
 }
-		
-.tooltip:hover::after {
-    width: 284px !important;
-    height: 104px !important;
-    border-radius: 6px !important;
-    background-color: #ffffff !important;
-    border: solid 1px #dddfe0 !important;
 
-    opacity: 1; /* Показываем его */
-	visibility: visible;
+.tooltip:hover::after {
+  width: 284px !important;
+  height: 104px !important;
+  border-radius: 6px !important;
+  background-color: #fff !important;
+  border: solid 1px #dddfe0 !important;
+  opacity: 1; /* Показываем его */
+  visibility: visible;
 }
