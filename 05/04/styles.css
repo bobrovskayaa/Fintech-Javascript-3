@@ -35,7 +35,7 @@
 }
 
 .div-danger {
-  display:inline;
+  display: inline;
   width: 498px;
   height: 64px;
   border: none;
@@ -84,10 +84,6 @@
   color: #333;
 }
 
-label.radio-inline.myradio {
-  padding-left: 0px !important;
-}
-
 .myradio {
   width: 258px;
   min-height: 66px;
@@ -121,7 +117,7 @@ label.radio-inline.myradio {
   padding: auto;
   font-family: Roboto;
   font-size: 17px;
-  color: #333333;
+  color: #333;
   margin: auto;
 }
 
@@ -132,7 +128,7 @@ label.radio-inline.myradio {
 }
 
 input[type="radio"] {
-  display:none;
+  display: none;
   margin-right: 18px;
   float: right;
 }
@@ -148,14 +144,14 @@ input[type="radio"] + label {
 input[type="radio"] + label::before {
   content: "";
   display: inline-block;
-  height: 18px;
-  width: 18px;
   margin: 0 5px 0 0;
   background-image: url(img/group-yellow.svg);
   background-repeat: no-repeat;
   height: 30px;
+  width: 30px;
   float: right;
 }
+
 input[type="radio"] + label::before {
   background-image: url(img/group-gray.svg);
   height: 30px;
@@ -176,7 +172,7 @@ input[type="radio"]:checked + label::before {
   border-radius: 6px !important;
   background-color: #fff !important;
   border: solid 1px #dddfe0 !important;
-  border-bottom: 1px dotted #0077AA;
+  border-bottom: 1px dotted #0077aa;
   cursor: help;
 }
 
@@ -186,7 +182,7 @@ input[type="radio"]:checked + label::before {
   border-radius: 6px !important;
   background-color: #fff !important;
   border: solid 1px #dddfe0 !important;
-  content: attr(data-tooltip); 
+  content: attr(data-tooltip);
   margin-top: -24px;
   opacity: 0; /* Наш элемент прозрачен... */
   padding: 3px 7px;
