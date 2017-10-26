@@ -1,16 +1,37 @@
 .myform {
-    margin: 0px 270px;
+    margin: auto;
+    width: 540px;
 }
 
 .myfield {
-    height: 66px;
-    border-radius: 6px;
-    background-color: #eef2f7;
-    margin: 24px 10%;
-    min-width: 80%;
-    border: none;
+    height: 66px !important;
+    width: 540px !important;
+    border-radius: 6px !important;
+    background-color: #eef2f7 !important;
+    margin: 24px 0px !important;
+    border: none !important;
+    padding: 19px !important;
+}
+
+.myfield-danger {
+    height: 66px !important;
+    width: 540px !important;
+    border-radius: 6px !important;
+    border: solid 1px #d0011b !important;
+    margin: 24px 0px;
     padding: 19px;
 }
+
+.error-message {
+    width: 523px;
+    height: 15px;
+    font-family: Roboto;
+    font-size: 13px;
+    color: #d0021b;
+    margin-top: -1px;
+    margin-bottom: 16px;
+}
+
 
 .myfield-white {
     height: 66px;
@@ -21,16 +42,36 @@
     padding: 19px;
 }
 
+.radio-text {
+    width: 245px;
+    height: 24px;
+    font-family: Roboto;
+    font-size: 21px;
+    font-weight: 300;
+    margin: 15px auto 27px;
+    color: #333333;
+}
+
 label.radio-inline.myradio {
     padding-left:0px;
 }
 
 .myradio {
-    width: 35%;
+    width: 258px;
     min-height: 66px;
+    margin: 0px;
     border-radius: 6px;
     background-color: #ffffff;
     border: solid 1px #dddfe0;
+}
+
+.radio-label {
+    width: 30px;
+    height: 20px;
+    font-family: Roboto;
+    font-size: 17px;
+    color: #333333;
+    margin: 2px auto 6px -1px;
 }
 
 .radio-div {
@@ -44,6 +85,7 @@ label.radio-inline.myradio {
     border-radius: 6px;
     background-color: #ffdd2d;
     margin: auto;
+    border: none;
 }
 
 .mybutton-apply {
@@ -58,7 +100,7 @@ label.radio-inline.myradio {
 .mybutton-div {
     width: 258px;
     height: 66px;
-    margin: 50px auto;
+    margin: 49px auto;
 }
 
 input[type="radio"] {
@@ -66,13 +108,13 @@ input[type="radio"] {
     margin-right: 18px;  
     float: right;         
 }
- 
+
 input[type="radio"] + label {
-  font: 18px bold;
-  color: #444;
-  cursor: pointer;
-  height: 30px;
-  width: 100%;
+    font: 18px bold;
+    color: #444;
+    cursor: pointer;
+    height: 30px;
+    width: 100%;
 }
 
 input[type="radio"] + label::before {
