@@ -4,57 +4,57 @@
 }
 
 .rectangle {
-    height: 132px;
-    width: 829px;
-    border-radius: 6px;
-    border: solid 1px #dddfe0;
-    margin: auto 11.6%;
-    display: flex;
-    flex-wrap: wrap;
-    align-content: space-around;
-    padding: 12px !important;
-  }
+  height: 132px;
+  width: 829px;
+  border-radius: 6px;
+  border: solid 1px #dddfe0;
+  margin: auto 11.6%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+  padding: 12px !important;
+}
 
-  .line-rectangle {
-    margin:auto;
-  }
+.line-rectangle {
+  margin: auto;
+}
 
-  .mytag {
-    display: flex;
-    height: 42px;
-    border-radius: 6px;
-    background-color: #eef2f7;
-    margin: 7px 6px 5px;
-    max-width: 300px;
-  }
+.mytag {
+  display: flex;
+  height: 42px;
+  border-radius: 6px;
+  background-color: #eef2f7;
+  margin: 7px 6px 5px;
+  max-width: 300px;
+}
 
-  .tag-name {
-    font-family: Roboto;
-    font-size: 13px;
-    background-color: #eef2f7;
-    max-width: 255px;
-    margin: 14px 12px 13px 11px; 
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: clip;
-  }
+.tag-name {
+  font-family: Roboto;
+  font-size: 13px;
+  background-color: #eef2f7;
+  max-width: 255px;
+  margin: 14px 12px 13px 11px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: clip;
+}
 
-  .tag-button {
-    width: 11px;
-    height: 11px;
-    margin: 11px 13px 13px 0px;
-  }
+.tag-button {
+  width: 11px;
+  height: 11px;
+  margin: 11px 13px 13px auto;
+}
 
-  .mybutton {
-    background: none;
-    border: none;
-    padding: 0;
-  }
+.mybutton {
+  background: none;
+  border: none;
+  padding: 0;
+}
 
-  .enter-text {
-    font-family: Roboto;
-    font-size: 13px;
-    padding: 14px 12px 13px 10px;
-    outline: none;
-    border: none;
-  }
+.enter-text {
+  font-family: Roboto;
+  font-size: 13px;
+  padding: 14px 12px 13px 10px;
+  outline: none;
+  border: none;
+}
