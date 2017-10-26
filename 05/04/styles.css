@@ -4,22 +4,63 @@
 }
 
 .myfield {
+    display: flex;
     height: 66px !important;
     width: 540px !important;
     border-radius: 6px !important;
     background-color: #eef2f7 !important;
     margin: 24px 0px !important;
     border: none !important;
-    padding: 19px !important;
 }
 
+.myinput {
+    width: 540px;
+    height: 66px;
+    background-color: #eef2f7;
+    padding: 23px 18px 23px 20px;
+    border: none;
+    border-radius: 6px;
+    outline: none;
+ }
+
 .myfield-danger {
+    display: flex;
     height: 66px !important;
     width: 540px !important;
     border-radius: 6px !important;
     border: solid 1px #d0011b !important;
     margin: 24px 0px;
-    padding: 19px;
+}
+
+.div-danger {
+    display:inline;
+    width: 498px;
+    height: 64px;
+    border: none;
+    border-radius: 6px;
+    outline: none;
+}
+
+.myinput-danger {
+    padding: 23px 18px 23px 20px;
+    width: 498px;
+    height: 64px;
+    border: none;
+    border-radius: 6px;
+    outline: none;
+ }
+
+ .symb1 {
+    display:inline;
+    width: 24px;
+    height: 24px;
+    margin: 21px 17px 21px auto;
+}
+
+ .symb-button {
+    background: none !important;
+    border: none !important;
+    padding: 0 !important;
 }
 
 .error-message {
@@ -28,8 +69,7 @@
     font-family: Roboto;
     font-size: 13px;
     color: #d0021b;
-    margin-top: -1px;
-    margin-bottom: 16px;
+    margin:auto;
 }
 
 
@@ -139,4 +179,43 @@ input[type="radio"]:checked + label::before {
     height: 30px;
     width: 30px;
     float: right;
+}
+
+.tooltip {
+    width: 284px !important;
+    height: 104px !important;
+    border-radius: 6px !important;
+    background-color: #ffffff !important;
+    border: solid 1px #dddfe0 !important;
+    
+	border-bottom: 1px dotted #0077AA;
+	cursor: help;
+}
+
+.tooltip::after {
+    width: 284px !important;
+    height: 104px !important;
+    border-radius: 6px !important;
+    background-color: #ffffff !important;
+    border: solid 1px #dddfe0 !important;
+
+	content: attr(data-tooltip); /* Главная часть кода, определяющая содержимое всплывающей подсказки */
+	margin-top: -24px;
+	opacity: 0; /* Наш элемент прозрачен... */
+	padding: 3px 7px;
+	position: absolute;
+	visibility: hidden; /* ...и скрыт. */
+			
+	transition: all 0.4s ease-in-out; /* Добавить плавности по вкусу */
+}
+		
+.tooltip:hover::after {
+    width: 284px !important;
+    height: 104px !important;
+    border-radius: 6px !important;
+    background-color: #ffffff !important;
+    border: solid 1px #dddfe0 !important;
+
+    opacity: 1; /* Показываем его */
+	visibility: visible;
 }
