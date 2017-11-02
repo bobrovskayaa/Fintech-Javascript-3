@@ -152,22 +152,17 @@ body {
   margin: 82px auto 50px;
 }
 
-.container {
-  width: 829px !important;
-  min-width: 829px !important;
-}
-
 .tags {
-  height: auto;
   max-width: 829px;
   width: 100%;
   border-radius: @field-border-radius;
   border: solid 1px @border-color;
-  margin: auto 11.6%;
+  margin: auto 18px;
   display: flex;
   flex-wrap: wrap;
   align-content: space-around;
   padding: 12px !important;
+  margin: auto !important;
 
   &__mytag {
     display: flex;
@@ -198,6 +193,7 @@ body {
   }
 
   &__enter-text {
+    display: flex;
     font-size: 13px;
     padding: 14px 12px 13px 10px;
     outline: none;
@@ -208,7 +204,7 @@ body {
 .body-form {
   margin: auto;
   max-width: @field-width;
-  width: 100;
+  width: 100%;
 
   &__myfield {
     display: flex;
@@ -433,6 +429,7 @@ body {
   }
 
   .banner {
+
     &__banner-center {
       padding: auto;
       padding-left: 32px;
@@ -449,7 +446,68 @@ body {
     }
   }
 
+  .body-header {
+    font-size: 24px;
+  }
+
   .tags {
-    margin: 18px;
+    height: auto;
+    max-width: 288px;
+    width: 100%;
+
+    &__mytag {
+      max-width: 255px;
+  
+      &__tag-name {
+        max-width: 230px;
+      }
+    }
+  }
+
+  .body-form {
+  
+    &__myfield {
+      max-width: 288px !important;
+      width: 100% !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+
+      &__myinput {
+        max-width: 288px !important;
+        width: 100% !important;
+      }
+    }
+
+    &__myfield-danger {
+      max-width: 290px !important;
+      width: 100% !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+
+      &__div-danger {
+        max-width: 290px !important;
+        width: 100% !important;
+
+        &__myinput-danger {
+          max-width: 290px !important;
+          width: 100% !important;
+        }
+      }
+    }
+
+    &__error-message {
+      max-width: 288px;
+      width: 100%;
+    }
+
+    &__radio-div {
+      flex-direction: column;
+
+      &__myradio {
+        max-width: 258px;
+        width: 100%;
+        margin: 24px auto !important;
+      }
+    }
   }
 }
