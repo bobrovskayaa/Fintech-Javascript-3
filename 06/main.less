@@ -3,7 +3,7 @@
 @item-text-color: #fff;
 @menu-border-color: #ffdd2d;
 @button-aply-color: #ffdd2d;
-@background-color : #eef2f7;
+@background-color: #eef2f7;
 @border-color: #dddfe0;
 @form-text-color: #333;
 @field-width: 540px;
@@ -29,7 +29,6 @@ body {
     height: 65px;
     background-image: url("img/header-logo.svg");
   }
-
 }
 
 .menu {
@@ -80,7 +79,6 @@ body {
   overflow: hidden;
 
   &__banner-center {
-    display: inline-block;
     width: 100%;
     max-width: 1080px;
     margin: auto;
@@ -102,6 +100,7 @@ body {
     &__text {
       position: relative;
       display: inline-block;
+
       &__banner-big {
         width: 342px;
         height: 100px;
@@ -111,7 +110,7 @@ body {
         color: @item-text-color;
         margin-top: 91px;
       }
-  
+
       &__banner-small {
         width: 326px;
         height: 48px;
@@ -130,7 +129,7 @@ body {
         font-size: 17px;
         line-height: 1.41;
         text-align: center;
-        color: #333;
+        color: @form-text-color;
         margin: 20px 0 0 14px;
         cursor: pointer;
         transition-property: border-radius, background-color;
@@ -159,8 +158,9 @@ body {
 }
 
 .tags {
-  height: 132px;
-  width: 829px;
+  height: auto;
+  max-width: 829px;
+  width: 100%;
   border-radius: @field-border-radius;
   border: solid 1px @border-color;
   margin: auto 11.6%;
@@ -207,12 +207,14 @@ body {
 
 .body-form {
   margin: auto;
-  width: @field-width;
+  max-width: @field-width;
+  width: 100;
 
   &__myfield {
     display: flex;
     height: @field-height !important;
-    width: @field-width !important;
+    max-width: @field-width !important;
+    width: 100% !important;
     border-radius: @field-border-radius !important;
     background-color: @background-color !important;
     margin-top: 24px !important;
@@ -333,7 +335,7 @@ body {
       border-radius: @field-border-radius;
       background-color: @page-background-color;
       border: solid 1px @border-color;
-      padding: 20px 19px 13px!important;
+      padding: 20px 19px 13px !important;
 
       &__radio-label {
         width: 30px;
@@ -350,7 +352,7 @@ body {
       margin-right: 18px;
       float: right;
     }
-    
+
     input[type="radio"] + label {
       font: 18px bold;
       color: #444;
@@ -358,7 +360,7 @@ body {
       height: 30px;
       width: 100%;
     }
-    
+
     input[type="radio"] + label::before {
       content: "";
       display: inline-block;
@@ -369,14 +371,14 @@ body {
       width: 30px;
       float: right;
     }
-    
+
     input[type="radio"] + label::before {
       background-image: url(img/group-gray.svg);
       height: 30px;
       width: 30px;
       float: right;
     }
-    
+
     input[type="radio"]:checked + label::before {
       background-image: url(img/group-yellow.svg);
       height: 30px;
@@ -400,7 +402,7 @@ body {
       font-size: 17px;
       color: @form-text-color;
       margin: auto;
-      transition-property: border-radius,background-color;
+      transition-property: border-radius, background-color;
       transition-duration: 1s;
     }
 
@@ -445,5 +447,9 @@ body {
         z-index: 2;
       }
     }
+  }
+
+  .tags {
+    margin: 18px;
   }
 }
