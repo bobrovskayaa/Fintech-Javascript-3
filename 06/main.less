@@ -119,10 +119,10 @@ body {
         color: @item-text-color;
         margin-top: 18px;
       }
-  
+
       &__banner-button {
-        display: inline-block;
-        box-sizing: border-box;
+        display: block;
+        width: 212px;
         border-radius: @field-border-radius;
         background-color: @button-aply-color;
         padding: 20px 35px;
@@ -148,7 +148,7 @@ body {
   font-size: 50px;
   font-weight: 300;
   text-align: center;
-  color: #333333;
+  color: @form-text-color;
   margin: 82px auto 50px;
 }
 
@@ -157,7 +157,6 @@ body {
   width: 100%;
   border-radius: @field-border-radius;
   border: solid 1px @border-color;
-  margin: auto 18px;
   display: flex;
   flex-wrap: wrap;
   align-content: space-around;
@@ -247,7 +246,7 @@ body {
       border-bottom: 1px dotted #07a;
       cursor: help;
     }
-    
+
     .tooltip::after {
       content: attr(data-tooltip);
       margin-top: -24px;
@@ -257,7 +256,7 @@ body {
       visibility: hidden; /* ...и скрыт. */
       transition: all 0.4s ease-in-out; /* Добавить плавности по вкусу */
     }
-    
+
     .tooltip:hover::after {
       opacity: 1; /* Показываем его */
       visibility: visible;
@@ -409,6 +408,132 @@ body {
   }
 }
 
+@media (max-width: 800px) {
+  .header {
+    &__img {
+      width: 50px;
+      height: 44px;
+      background-image: url("img/logo-mobile.svg");
+    }
+
+    &__hamburger {
+      width: 25px;
+      height: 20px;
+      background-image: url("img/hamburger.svg");
+    }
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .banner {
+    min-height: 550px;
+    height: 100%;
+
+    &__banner-center {
+      padding: auto;
+      padding-left: 32px;
+      min-height: 550px;
+      height: 100%;
+
+      &__img {
+        z-index: 1;
+        display: none;
+      }
+
+      &__text {
+        z-index: 2;
+        width: 100%;
+        background-image: url('img/cards.png');
+        background-repeat: no-repeat;
+        background-position: bottom;
+
+        &__banner-big {
+          margin-left: auto;
+          margin-right: auto;
+          margin-top: 26px;
+        }
+  
+        &__banner-small {
+          margin-left: auto;
+          margin-right: auto;
+        }
+  
+        &__banner-button {
+          width: 252px;
+          margin: 162px auto 30px auto;
+        }
+      }
+    }
+  }
+
+  .body-header {
+    font-size: 24px;
+  }
+
+  .tags {
+    height: auto;
+    max-width: 448px;
+    width: 100%;
+
+    &__mytag {
+      max-width: 405px;
+
+      &__tag-name {
+        max-width: 390px;
+      }
+    }
+  }
+
+  .body-form {
+
+    &__myfield {
+      max-width: 448px !important;
+      width: 100% !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+
+      &__myinput {
+        max-width: 448 !important;
+        width: 100% !important;
+      }
+    }
+
+    &__myfield-danger {
+      max-width: 448px !important;
+      width: 100% !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+
+      &__div-danger {
+        max-width: 448px !important;
+        width: 100% !important;
+
+        &__myinput-danger {
+          max-width: 448px !important;
+          width: 100% !important;
+        }
+      }
+    }
+
+    &__error-message {
+      max-width: 448px;
+      width: 100%;
+    }
+
+    &__radio-div {
+      flex-direction: column;
+
+      &__myradio {
+        max-width: 418px;
+        width: 100%;
+        margin: 24px auto !important;
+      }
+    }
+  }
+}
+
 @media (max-width: 640px) {
   .header {
     &__img {
@@ -429,19 +554,43 @@ body {
   }
 
   .banner {
+    min-height: 390px !important;
+    height: 100%;
 
     &__banner-center {
       padding: auto;
       padding-left: 32px;
+      min-height: 390px;
+      height: 100%;
+      width: 100%;
 
       &__img {
-        position: relative;
         z-index: 1;
+        display: none;
       }
 
       &__text {
-        position: relative;
         z-index: 2;
+        width: 100%;
+        background-image: url('img/cards.png');
+        background-repeat: no-repeat;
+        background-position: bottom;
+
+        &__banner-big {
+          margin-left: auto;
+          margin-right: auto;
+          margin-top: 26px;
+        }
+  
+        &__banner-small {
+          margin-left: auto;
+          margin-right: auto;
+        }
+  
+        &__banner-button {
+          width: 252px;
+          margin: 162px auto 30px auto;
+        }
       }
     }
   }
@@ -457,7 +606,7 @@ body {
 
     &__mytag {
       max-width: 255px;
-  
+
       &__tag-name {
         max-width: 230px;
       }
@@ -465,7 +614,7 @@ body {
   }
 
   .body-form {
-  
+
     &__myfield {
       max-width: 288px !important;
       width: 100% !important;
