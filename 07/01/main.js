@@ -27,7 +27,7 @@ function inputMask(str) {
       currentStr += str[18] + ' - ';
     }
     if (initLen >= 23) {
-      currentStr += str[22] + ' ' ;
+      currentStr += str[22] + ' ';
     }
     if (initLen >= 25) {
       currentStr += str[24] + ' - ';
@@ -40,8 +40,9 @@ function inputMask(str) {
     }
   }
 
-  if (initLen === 0 || initLen > 1 && initLen < 6)
+  if (initLen === 0 || initLen > 1 && initLen < 6) {
       currentStr = '+ 7 (';
+  }
   else {
     inputMaskСonditions(initLen);
   }
@@ -55,9 +56,8 @@ function inputUpdateHandler() {
 
   if (!/[^0-9+-\s()]/.test(input.value)) {
     newLine = inputMask(input.value);
-  }
-  else {
-    newLine = input.value.slice(0,-1);
+  } else {
+    newLine = input.value.slice(0, -1);
   }
   output.text = `Позвонить на ${newLine}`;
   output.href = `tel:${newLine}`;
