@@ -1,4 +1,29 @@
-a {
-  padding: 2px;
-  border: 1px solid black;
+@background-color: #eef2f7;
+@link-color: #333;
+@field-width: 500px;
+@field-height: 20px;
+@field-border-radius: 6px;
+
+.form-telephone {
+  max-width: @field-width;
+  width: 100%;
+  height: @field-height;
+  margin: auto;
+
+  &__myfield {
+    width: @field-width;
+    height: @field-height;
+    background-color: @background-color;
+    padding: 23px 18px 23px 20px;
+    margin: 10px auto;
+    border: none;
+    border-radius: @field-border-radius;
+    outline: none;
+    text-align: center;
+  }
+
+  a {
+    color: @link-color;
+    text-decoration: none;
+  }
 }

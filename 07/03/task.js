@@ -17,7 +17,7 @@ const throttle = (time, callback) => {
       setTimeout(() => throttleHandler(...args), lastTime + time - currentTime);
     }
   };
- 
+
   return throttleHandler;
 };
 
