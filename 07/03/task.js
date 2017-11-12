@@ -3,7 +3,7 @@
  * Доп. задание: предложите несколько вариантов решения.
  */
 
-function throttle(time, callback) {
+const throttle = (time, callback) => {
   let lastTime = 0;
   let currentTime = 0;
 
