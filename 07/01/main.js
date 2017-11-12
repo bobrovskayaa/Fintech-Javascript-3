@@ -20,8 +20,7 @@ function inputMask(str) {
 
   if (initLen === 0 || initLen > 1 && initLen < 6) {
     currentStr = '+ 7 (';
-  }
-  else {
+  } else {
     inputMaskСonditions(initLen);
   }
   return currentStr;
