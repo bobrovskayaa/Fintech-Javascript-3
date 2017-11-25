@@ -2,7 +2,12 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link href="styles.css" rel="stylesheet">
+    <script src="scripts.js" async></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400&amp;subset=cyrillic" rel="stylesheet">
     <title>Задание 5.4</title>
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
 </head>
 <body>
 <h1>Сверстать форму. Pixel-perfect. Select делать не нужно</h1>
@@ -14,5 +19,57 @@
     <a href="https://zeplin.io/">zeplin.io</a>, и попросить доступ у Евгения Мамаева.
 </p>
 <img src="./task.png" alt="">
+<br>
+<h1>Форма:</h1>
+<div>
+    <form class="myform">
+        <fieldset>
+            <div class="myfield">
+                <!--img alt="Selector arrow" class="arrow" src="arrow.svg"-->
+                <input class="myinput" placeholder="ФИО">
+            </div>
+            <div class="myfield-danger">
+                <div class="div-danger"><input class="myinput-danger" placeholder="Город проживания"></div>
+                <div class="symb1">
+                    <button class="symb-button"><img src="img/symbol1.svg" alt=""></button>
+                </div>
+            </div>
+            <div class="error-message">
+                Для заполнения этого поля не допустимо использовать буквы латинского алфавита
+            </div>
+            <div class="myfield">
+                <input class="myinput" placeholder="Мобильный телефон">
+            </div>
+            <div class="myfield">
+                    <div class="div-danger"><input class="myinput" placeholder="Электронная почта"></div>
+                    <div class="symb1">
+                            <button type="button" class="btn btn-default symb-button" data-toggle="tooltip" 
+                                data-placement="left" title="Ваши данные замаскированы в целях безопасности. Для изменения информации с вами свяжется оператор колл-центра.">
+                                <img src="img/symbol2.svg" alt="">
+                            </button>
+                     
+                    </div>
+            </div>
+            <div class="radio-text">
+                Выберите это или другое
+            </div>
+            <div class="radio-div">
+                    <div class="radio-inline myradio">
+                        <input id="rfirst" type="radio" name="radio" checked hidden />
+                        <label for="rfirst" class="radio-label">Это</label>
+                    </div>
+                    <div class="radio-inline myradio">
+                        <input id="rsecond" type="radio" name="radio" hidden />
+                        <label for="rsecond" class="radio-label">Другое</label>    
+                    </div>
+            </div>
+            <div class="mybutton-div">
+                <button class="mybutton" type="submit">
+                    Отправить
+                </button>
+            </div>
+        </fieldset>    
+    </form>
+</div>
 </body>
 </html>
