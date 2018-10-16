@@ -1,14 +1,21 @@
 <!DOCTYPE HTML>
 <html>
-<head>
+  <head>
     <meta charset="utf-8">
+    <link href="style.css" rel="stylesheet">
     <title>Задание 3</title>
-</head>
-<body>
-<h1>Создать ненумерованный список, и внутри одного элемента - нумерованный список:</h1>
-<ul>
-    <li> У ненумерованного списка `точки` должны быть желтого цвета </li>
-    <li> У нумерованного числа - синего </li>
-</ul>
-</body>
+  </head>
+  <body>
+    <ul>
+      <li class="col1">Пункт 1.</li>
+      <li class="col1">Пункт 2.</li>
+      <li class="col1">Пункт 3.
+        <ol>
+          <li class="col2">Подпункт 3.1.</li>
+          <li class="col2">Подпункт 3.2.</li>
+        </ol>
+      </li>
+      <li class="col1">Пункт 4.</li>
+    </ul>
+  </body>
 </html>

@@ -1,0 +1,23 @@
+li.col1 {
+  list-style-type: none; /* Прячем исходные маркеры */
+}
+
+li.col1::before {
+  color: yellow; /* Цвет маркера */
+  content: "•"; /* Сам маркер */
+  padding-right: 10px; /* Расстояние от маркера до текста */
+}
+
+ol {
+  counter-reset: list1;
+}
+
+li.col2 {
+  list-style: none;
+}
+
+li.col2::before {
+  color: blue; /* Цвет маркера */
+  counter-increment: list1; /* Увеличиваем значение счетчика */
+  content: counter(list1) ". "; /* Выводим число */
+}

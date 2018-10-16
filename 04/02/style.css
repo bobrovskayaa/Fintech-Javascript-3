@@ -1,0 +1,63 @@
+table.table1 {
+  width: 100%;
+  table-layout: fixed;
+  border: none;
+  border-collapse: collapse; /* Убираем двойные линии между ячейками */
+}
+table.table1 tr:nth-child(even) { background: #00cb82; }
+table.table1 tr:nth-child(odd) { background: gray; }
+table.table1 tr:hover { background: #f3bd48; }
+
+table.table1 td:nth-child(1) {
+  white-space: nowrap; /* Отменяем перенос текста */
+  overflow: hidden; /* Обрезаем содержимое */
+  text-overflow: ellipsis; /* Многоточие */
+}
+
+table.table1 td:nth-child(2) {
+  word-wrap: break-word; /* Перенос слов */
+}
+
+th.capt1 {
+  text-align: center;
+  background: #009bff;
+  border-bottom: 1px solid black;
+}
+
+td {
+  border: none;
+}
+
+table.table2 {
+  border-spacing: 8px;
+}
+
+td.col1 {
+  background: #00cb82;
+  padding: 8px;
+}
+
+td.col2 {
+  background: #00d89a;
+  padding: 8px;
+}
+
+td.col3 {
+  background: #00e4bd;
+  padding: 8px;
+}
+
+td.col4 {
+  background: #00ede9;
+  padding: 8px;
+}
+
+td.col5 {
+  background: #00cbf6;
+  padding: 8px;
+}
+
+td.col6 {
+  background: #009bff;
+  padding: 8px;
+}

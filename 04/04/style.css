@@ -1,0 +1,94 @@
+a {
+  color: #1d6152; /* Цвет ссылок */
+}
+
+img.img1 {
+  float: right;
+  width: 35%;
+  margin: 10px;
+}
+
+a:visited {
+  color: black; /* Цвет посещенных ссылок */
+}
+
+div {
+  width: 960px; /* Ширина слоя */
+  margin: 40px auto;
+}
+
+h1 {
+  font-family: Roboto Condensed;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  background-image: url(http://tobiasahlin.com/images/typesource/leaves.jpg);
+  background-color: #2b5a33;
+  background-size: cover;
+  padding: 4em 6em 7.5em;
+}
+
+h2 {
+  font-family: Roboto;
+  font-size: 2.7em;
+  font-weight: 100;
+  line-height: 1em;
+  letter-spacing: 0.64em;
+  color: #1d6152;
+  background-color: #fff;
+  display: inline-block;
+  padding: 0.65em 0 0.65em 0.7em;
+}
+
+h3 {
+  font-family: Roboto;
+  font-size: 1.7em;
+  font-weight: 50;
+  line-height: 1em;
+  letter-spacing: 0.45em;
+  color: #1d6152;
+  background-color: #fff;
+  display: inline-block;
+  margin-top: -0.7em;
+  padding: 0.65em 0 0.65em 0.7em;
+}
+
+p {
+  font-family: Roboto;
+  letter-spacing: 0.08em;
+  background-color: #fff;
+  display: inline-block;
+  padding: 0.65em 0 0.65em 0.7em;
+}
+
+p.p1 {
+  font-size: 90%;
+}
+
+p.p2 {
+  font-size: 80%;
+}
+
+.enum {
+  font-family: Roboto;
+  letter-spacing: 0.08em;
+  background-color: #fff;
+  display: inline-block;
+}
+
+.enum2 {
+  font-family: Roboto;
+  font-size: 80%;
+  letter-spacing: 0.08em;
+  background-color: #fff;
+  display: inline-block;
+}
+
+.Wrapper {
+  padding-bottom: 56.25%;
+  width: 50%;
+}
+
+iframe {
+  border: 0;
+}
